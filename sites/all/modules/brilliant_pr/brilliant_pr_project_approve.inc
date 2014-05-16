@@ -93,7 +93,7 @@ function brilliant_pr_project_approve_page() {
     }
   } #end foreach
   if (!empty($entity)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>';
+    $content = '';
     $html = $content . theme('table',
         array(
           'header' => $header,
@@ -102,7 +102,7 @@ function brilliant_pr_project_approve_page() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => t('No one projects for approve found.'),
+          'empty' => '<div class="alert alert-info a-message">'.t('Not found any projects for approve.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -113,7 +113,7 @@ function brilliant_pr_project_approve_page() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('No one project for approve found') . '<br>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any projects for approve.') .'</div>';
     $html = $content;
   }
   return ($html);

@@ -90,7 +90,7 @@ function brilliant_pr_project_remove_page() {
     }
   } #end foreach
   if (!empty($entity)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>';
+    $content = '';
     if (in_array('administrator', $user->roles)) {
       $content .= l(t('Purge all projects'), 'entity/brilliant_pr_project/basic/delete_all') . '<br>' .
         l(t('Restore all projects'), 'entity/brilliant_pr_project/basic/restore_all');
@@ -103,7 +103,7 @@ function brilliant_pr_project_remove_page() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => t('No current projects for a while...'),
+          'empty' => '<div class="alert alert-info a-message">'.t('Not found any removed projects.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -114,7 +114,7 @@ function brilliant_pr_project_remove_page() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('No removed project found') . '<br>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any removed projects.') .'</div>';
     $html = $content;
   }
   return ($html);

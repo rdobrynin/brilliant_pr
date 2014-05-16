@@ -9,10 +9,6 @@ function brilliant_pr_task_admin_page() {
   $content = array();
   $content[] = array(
     '#type' => 'item',
-    '#markup' => t('Hello') . ', ' . get_name($user->uid)
-  );
-  $content[] = array(
-    '#type' => 'item',
     '#markup' => l(t('Add an task entity'), 'entity/brilliant_pr_task/basic/add'),
   );
   // task_list_entities() defined below returns a 'theme array' with #theme => 'table'
@@ -82,7 +78,7 @@ function brilliant_pr_task_list_admin_entities() {
     // There were no entities. Tell the user.
     $content[] = array(
       '#type' => 'item',
-      '#markup' => t('Not found any task.'),
+      '#markup' => '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>',
     );
   }
   return $content;

@@ -153,8 +153,7 @@ function brilliant_pr_project_list_complete() {
     }
   } #end foreach
   if (!empty($entity) && $user->uid && $account = user_load($entity->uid)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' .
-      l(t('Add a project'), 'entity/brilliant_pr_project/basic/add');
+    $content = '';
     $html = $content . theme('table',
         array(
           'header' => $header,
@@ -163,7 +162,7 @@ function brilliant_pr_project_list_complete() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => t('Not found any completed project.'),
+          'empty' => '<div class="alert alert-info a-message">'.t('Not found any completed projects.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -174,8 +173,7 @@ function brilliant_pr_project_list_complete() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('Not found any completed project.') . '<br>' .
-      l(t('Add a project'), 'entity/brilliant_pr_project/basic/add');
+    $content = '<div class="alert alert-info a-message">'.t('Not found any completed projects.') .'</div>';
     $html = $content;
 
   }

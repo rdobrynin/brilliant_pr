@@ -150,7 +150,7 @@ function brilliant_pr_task_list_complete() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('Not found any completed task.') . '<br>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any completed tasks.') .'</div>';
     $html = $content;
   }
   return ($html);

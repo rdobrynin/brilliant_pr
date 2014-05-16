@@ -61,8 +61,7 @@ function brilliant_pr_project_complete_page() {
   } #end foreach
 
   if (!empty($entity)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' .
-      l(t('Delete all projects'), 'entity/brilliant_pr_project/basic/remove_all');
+    $content = '';
     $html = $content . theme('table',
         array(
           'header' => $header,
@@ -82,7 +81,7 @@ function brilliant_pr_project_complete_page() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('Not found any completed project.');
+    $content = '<div class="alert alert-info a-message">'.t('Not found any completed projects.') .'</div>';
     $html = $content;
 
   }

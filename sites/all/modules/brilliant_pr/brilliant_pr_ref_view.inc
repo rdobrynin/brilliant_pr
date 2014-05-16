@@ -88,7 +88,7 @@ function  brilliant_pr_task_ref_list_admin_entities() {
     // There were no entities. Tell the user.
     $content[] = array(
       '#type' => 'item',
-      '#markup' => t('Not found any task.'),
+      '#markup' => '<div class="alert alert-info a-message">'.t('Not found any tasks.') .'</div>',
     );
   }
   return $content;

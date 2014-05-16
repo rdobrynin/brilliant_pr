@@ -182,8 +182,7 @@ function brilliant_pr_task_info_page() {
     }
   } #end foreach
   if (!empty($entity) && $user->uid && $account = user_load($entity->uid)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' .
-      l(t('Add a task'), 'entity/brilliant_pr_task/basic/add');
+    $content = '';
     $html = $content . theme('table',
         array(
           'header' => $header,
@@ -192,7 +191,7 @@ function brilliant_pr_task_info_page() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => t('Not found any task.'),
+          'empty' => '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -203,8 +202,7 @@ function brilliant_pr_task_info_page() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('Not found any task.') . '<br>' .
-      l(t('Add a task'), 'entity/brilliant_pr_task/basic/add');
+    $content = '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>';
     $html = $content;
 
   }

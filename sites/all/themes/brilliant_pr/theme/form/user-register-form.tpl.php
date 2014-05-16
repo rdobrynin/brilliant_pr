@@ -21,12 +21,17 @@ hide($form['actions']['submit']);
      </div>
      <div class="row p-top">
        <div class="col-lg-6">
-         <?php print render($form['account']['mail']); ?>
+         <?php print render($form['field_phone'][LANGUAGE_NONE][0]['value']); ?>
        </div>
        <div class="col-lg-6">
          <?php print render($form['account']['name']); ?>
        </div>
      </div>
+    <div class="row p-top">
+      <div class="col-lg-6">
+        <?php print render($form['account']['mail']); ?>
+      </div>
+    </div>
 
      <div class="row p-top">
        <div class="col-lg-6">

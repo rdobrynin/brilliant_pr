@@ -55,7 +55,7 @@ function brilliant_pr_task_approve_page() {
     }
   } #end foreach
   if (!empty($entity)) {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>';
+    $content ='';
     $html = $content . theme('table',
         array(
           'header' => $header,
@@ -64,7 +64,7 @@ function brilliant_pr_task_approve_page() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => t('Not found any task for approving.'),
+          'empty' =>'<div class="alert alert-info a-message">'.t('Not found any tasks for approve.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -75,7 +75,7 @@ function brilliant_pr_task_approve_page() {
     );
   }
   else {
-    $content = t('Hello') . ', ' . get_name($user->uid) . '<br>' . t('Not found any task for approving.') . '<br>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any tasks for approve.') .'</div>';
     $html = $content;
   }
   return ($html);
