@@ -52,6 +52,33 @@ global $user;
       <nav role="navigation">
         <?php print render($page['primary_nav']); ?>
         <?php print render($page['secondary_nav']); ?>
+
+        <!--        add select list-->
+        <?php if (arg(1) == 'brilliant_pr_project' && $user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
+          <div class="btn-group select-nav-top">
+            <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Approve projects</a></li>
+              <li><a href="#">Complete projects</a></li>
+              <li><a href="#">Current projects</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        <?php endif; ?>
+        <?php if (arg(1) == 'brilliant_pr_task' && $user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
+          <div class="btn-group select-nav-top">
+            <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Approve tasks</a></li>
+              <li><a href="#">Complete tasks</a></li>
+              <li><a href="#">Current tasks</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        <?php endif; ?>
+
         <?php print $content; ?>
       </nav>
 <!--  --><?php //if($user->uid == 0) {
