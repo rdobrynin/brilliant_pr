@@ -73,6 +73,7 @@ global $base_url;
             <ul class="dropdown-menu">
               <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/approve">Approve tasks</a></li>
               <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage">Current tasks</a></li>
+              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/complete">Complete tasks</a></li>
               <li class="divider"></li>
               <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/remove">Deleted tasks</a></li>
             </ul>
