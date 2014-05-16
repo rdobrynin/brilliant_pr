@@ -59,10 +59,10 @@ global $user;
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li><a href="#">Approve projects</a></li>
-              <li><a href="#">Complete projects</a></li>
               <li><a href="#">Current projects</a></li>
+              <li><a href="#">Complete projects</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Deleted projects</a></li>
             </ul>
           </div>
         <?php endif; ?>
@@ -71,10 +71,10 @@ global $user;
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li><a href="#">Approve tasks</a></li>
-              <li><a href="#">Complete tasks</a></li>
               <li><a href="#">Current tasks</a></li>
+              <li><a href="#">Complete tasks</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Deleted tasks</a></li>
             </ul>
           </div>
         <?php endif; ?>

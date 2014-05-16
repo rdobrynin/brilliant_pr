@@ -4,8 +4,6 @@
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,24 +81,27 @@
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="77" column="45" selection-start="3413" selection-end="3413" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="1639">
-              <folding />
+              <folding>
+                <marker date="1400231852826" expanded="true" signature="3468:3998" placeholder="..." />
+                <marker date="1400231852826" expanded="true" signature="3572:3991" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="region--navigation.tpl.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="region--navigation.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="16" selection-start="3872" selection-end="3872" vertical-scroll-proportion="0.5742331" vertical-offset="504" max-vertical-offset="2057">
+            <state line="61" column="55" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-10.666667" vertical-offset="378" max-vertical-offset="2323">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_nav.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="menu_nav.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="16" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-9.653846" vertical-offset="434" max-vertical-offset="1816">
+            <state line="41" column="19" selection-start="811" selection-end="811" vertical-scroll-proportion="0.30492425" vertical-offset="416" max-vertical-offset="2172">
               <folding />
             </state>
           </provider>
@@ -140,8 +141,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/theme/menu/menu-tree.func.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/theme/system/region--navigation.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" />
       </list>
     </option>
   </component>
@@ -671,8 +672,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14199395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3429003" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14199395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3429003" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -712,7 +713,10 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="0" selection-start="4078" selection-end="4078" vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="1908">
-          <folding />
+          <folding>
+            <marker date="1400231852826" expanded="true" signature="3468:3998" placeholder="..." />
+            <marker date="1400231852826" expanded="true" signature="3572:3991" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,7 +771,10 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="0" selection-start="4078" selection-end="4078" vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="1908">
-          <folding />
+          <folding>
+            <marker date="1400231852826" expanded="true" signature="3468:3998" placeholder="..." />
+            <marker date="1400231852826" expanded="true" signature="3572:3991" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -822,7 +829,10 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="33" selection-start="3693" selection-end="3693" vertical-scroll-proportion="0.0" vertical-offset="1602" max-vertical-offset="1908">
-          <folding />
+          <folding>
+            <marker date="1400231852826" expanded="true" signature="3468:3998" placeholder="..." />
+            <marker date="1400231852826" expanded="true" signature="3572:3991" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -974,7 +984,10 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="45" selection-start="3413" selection-end="3413" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="1639">
-          <folding />
+          <folding>
+            <marker date="1400231852826" expanded="true" signature="3468:3998" placeholder="..." />
+            <marker date="1400231852826" expanded="true" signature="3572:3991" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,16 +1025,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="16" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-9.653846" vertical-offset="434" max-vertical-offset="1816">
+        <state line="61" column="55" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-10.666667" vertical-offset="378" max-vertical-offset="2323">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="16" selection-start="3872" selection-end="3872" vertical-scroll-proportion="0.5742331" vertical-offset="504" max-vertical-offset="2057">
+        <state line="41" column="19" selection-start="811" selection-end="811" vertical-scroll-proportion="0.30492425" vertical-offset="416" max-vertical-offset="2172">
           <folding />
         </state>
       </provider>
