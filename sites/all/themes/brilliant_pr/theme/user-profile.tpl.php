@@ -33,7 +33,7 @@
  *
  * @ingroup themeable
  */     
-
+var_dump($user_profile);
 ?>
 
 
