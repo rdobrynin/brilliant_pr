@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.install" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.install" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
           <file leaf-file-name="brilliant_pr.module" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="409" column="44" selection-start="13488" selection-end="13488" vertical-scroll-proportion="0.485426" vertical-offset="6893" max-vertical-offset="55684">
+                <state line="384" column="0" selection-start="12616" selection-end="12616" vertical-scroll-proportion="0.30381167" vertical-offset="6605" max-vertical-offset="55576">
                   <folding />
                 </state>
               </provider>
@@ -72,7 +70,7 @@
           <file leaf-file-name="brilliant_pr.module" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="447" column="41" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.3026906" vertical-offset="7740" max-vertical-offset="55378">
+                <state line="387" column="5" selection-start="12646" selection-end="12646" vertical-scroll-proportion="0.38260868" vertical-offset="6578" max-vertical-offset="55298">
                   <folding />
                 </state>
               </provider>
@@ -664,7 +662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="409" column="44" selection-start="13488" selection-end="13488" vertical-scroll-proportion="0.485426" vertical-offset="6893" max-vertical-offset="55684">
+        <state line="384" column="0" selection-start="12616" selection-end="12616" vertical-scroll-proportion="0.30381167" vertical-offset="6605" max-vertical-offset="55576">
           <folding />
         </state>
       </provider>

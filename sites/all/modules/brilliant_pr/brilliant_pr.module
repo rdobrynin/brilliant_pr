@@ -383,7 +383,6 @@ function brilliant_pr_menu() {
     'access arguments' => array('create brilliant_pr_projects'),
   );
 
-
   /**
    * Add new tabs
    */
@@ -412,9 +411,6 @@ function brilliant_pr_menu() {
     'type' => MENU_LOCAL_TASK,
     'weight' => 4,
   );
-
-
-
   $items['entity/brilliant_pr_task'] = array(
     'title' => 'Tasks',
     'page callback' => 'brilliant_pr_task_info_page',
@@ -459,8 +455,6 @@ function brilliant_pr_menu() {
     'type' => MENU_LOCAL_TASK,
     'weight' => 4,
   );
-
-
 //  adding new tab page for approve tasks
   $items['admin/structure/brilliant_pr_task/manage/approve'] = array(
     'title' => 'Tasks for approve',
