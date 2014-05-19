@@ -216,7 +216,7 @@ function brilliant_pr_install() {
     'edit brilliant_pr_tasks',
     'create brilliant_pr_tasks',
     'edit own brilliant_pr_tasks',
-    'view user complete brilliant_pr_tasks',
+    'view user completed brilliant_pr_tasks',
     //    cancel own account
     'cancel account',
     'change own username',
@@ -238,8 +238,6 @@ function brilliant_pr_install() {
     'access site in maintenance mode',
     'block IP addresses',
     'administer taxonomy',
-    'edit terms in 5',
-    'delete terms in 5',
     'edit terms in 1',
     'delete terms in 1',
     'restore_delete_brilliant_pr_projects',
@@ -282,7 +280,7 @@ function brilliant_pr_install() {
     'edit brilliant_pr_tasks',
     'create brilliant_pr_tasks',
     'edit own brilliant_pr_tasks',
-    'view user complete brilliant_pr_tasks',
+    'view user completed brilliant_pr_tasks',
     //    cancel own account
     'cancel account',
     'change own username',
