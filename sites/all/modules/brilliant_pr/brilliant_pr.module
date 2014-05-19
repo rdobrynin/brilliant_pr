@@ -856,7 +856,7 @@ function brilliant_pr_project_title($entity) {
 
 function brilliant_pr_project_current_tasks() {
 $arg = arg(3);
-  if(is_numeric(arg(3))) {
+  if(is_numeric(arg(3)) && arg(3) !=0) {
     $tasks = brilliant_pr_task_load_multiple();
     $counter = 0;
     foreach ($tasks as $task) {
@@ -869,9 +869,6 @@ $arg = arg(3);
   else {
     $title = 'Current tasks';
   }
-
-//  $title = '<span class="badge">'.$counter.'</span>';
-
  return $title;
 }
 
