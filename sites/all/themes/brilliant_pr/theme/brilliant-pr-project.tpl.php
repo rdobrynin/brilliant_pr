@@ -133,12 +133,10 @@ $curator_fields = user_load_by_name($curator_username);
       <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $customer_fields->init; ?>
     </div>
     <div class="col-lg-3">
-      <span class="grey">  <?php  print _bootstrap_icon('earphone'); ?></span>&nbsp;&nbsp;<?php  print $customer_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+      <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $customer_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+      <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
     </div>
-
   </div>
-
-
   <div class="row p-top">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['curator']['#title']); ?></span>
@@ -149,15 +147,13 @@ $curator_fields = user_load_by_name($curator_username);
     <div class="col-lg-3">
       <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->init; ?>
     </div>
-    <div class="col-lg-3">
-      <span class="grey">  <?php  print _bootstrap_icon('earphone'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+    <div class="col-lg-4">
+      <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+      <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
     </div>
+
   </div>
-
-
 </div>
-
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-3">
       <span class="title_view"> <?php  print render($content['opt_time']['#title']); ?></span>

@@ -32,8 +32,7 @@
  * @see template_preprocess_user_profile()
  *
  * @ingroup themeable
- */     
-var_dump($user_profile);
+ */
 ?>
 
 
