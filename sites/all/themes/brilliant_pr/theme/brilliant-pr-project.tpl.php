@@ -81,11 +81,11 @@ $content = $element->content;
 $content['company']['#title'] = t('Client');
 $content['customer_name']['#title'] = t('Contact person');
 $content['curator']['#title'] = t('Curator');
-
+$content['opt_time']['#title'] = t('Optimal date');
+$content['dead_time']['#title'] = t('Deadline date');
 //get customer profile
 $customer_username = get_user_customer($content['customer_name']['#markup']);
 $customer_fields = user_load_by_name($customer_username);
-
 // get curator profile
 $curator_username = get_user_curator($content['curator']['#markup']);
 $curator_fields = user_load_by_name($curator_username);
@@ -109,7 +109,6 @@ $curator_fields = user_load_by_name($curator_username);
 
 
 <div class="user_edit_profile">
-
   <div class="row p-top">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['company']['#title']); ?></span>
@@ -119,9 +118,7 @@ $curator_fields = user_load_by_name($curator_username);
       <?php  print render($content['company']['#markup']); ?>
     </div>
   </div>
-
   <!--customer-->
-
   <div class="row p-top">
     <div class="col-lg-2">
       <span class="title_view"><?php  print render($content['customer_name']['#title']); ?></span>
@@ -132,11 +129,14 @@ $curator_fields = user_load_by_name($curator_username);
     <div class="col-lg-3">
       <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $customer_fields->init; ?>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $customer_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+    </div>
+    <div class="col-lg-1 text-left">
       <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
     </div>
   </div>
+<!--  curator-->
   <div class="row p-top">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['curator']['#title']); ?></span>
@@ -147,50 +147,43 @@ $curator_fields = user_load_by_name($curator_username);
     <div class="col-lg-3">
       <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->init; ?>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-2">
       <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+    </div>
+    <div class="col-lg-1 text-left">
       <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
     </div>
 
   </div>
 </div>
-  <div class="row p-top user_edit_profile">
-    <div class="col-lg-3">
+  <div class="row">
+    <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['opt_time']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+     <br>
       <?php  print render($content['opt_time']['#markup']); ?>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['dead_time']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <br>
       <?php  print render($content['dead_time']['#markup']); ?>
     </div>
-  </div>
 
-  <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['status']['#title']); ?></span>
-    </div>
-    <div class="col-lg-6">
+      <span class="title_view"> <?php  print render($content['status']['#title']); ?><span class="badge status-badge">!</span></span>
+      <br>
       <?php  print render($content['status']['#markup']); ?>
     </div>
-  </div>
-
-  <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['created']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <br>
       <?php  print render($content['created']['#markup']); ?>
     </div>
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['changed']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <span class="title_view"> <?php  print render($content['changed']['#title']); ?></span
+      <br>
       <?php  print render($content['changed']['#markup']); ?>
     </div>
   </div>
+
 
 <?php //print drupal_render_children($content); ?>
