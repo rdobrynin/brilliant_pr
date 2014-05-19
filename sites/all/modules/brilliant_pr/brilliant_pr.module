@@ -2991,6 +2991,7 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
 
 //  project form
   if ($form_id == 'brilliant_pr_project_form') {
+    $form['submit']["#attributes"]['class'][] = 'btn-success';
     $form['title']['#title_display'] = 'invisible';
     $form['title']['#title'] = t('Project name');
     $form['description']['#title_display'] = 'invisible';
@@ -3009,6 +3010,7 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
     $form['opt_time']['#size'] = 25;
   }
   if ($form_id == 'brilliant_pr_task_form') {
+    $form['submit']["#attributes"]['class'][] = 'btn-success';
     $form['title']['#title_display'] = 'invisible';
     $form['title']['#title'] = t('Task name');
     $form['ref']['#title_display'] = 'invisible';
