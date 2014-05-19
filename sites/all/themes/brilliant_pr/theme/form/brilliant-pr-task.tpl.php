@@ -21,7 +21,21 @@ global $user;
         </div>
       </div>
 <!--      check if we create task for this project, we hide project ref item-->
-      <?php if (arg(3) == 'add' && is_null(arg(4)) ||$user->uid != in_array('customer', $user->roles) ): ?>
+      <?php if (arg(3) == 'add' && is_null(arg(4)) ||$user->uid != in_array('customer', $user->roles) && arg(3) == 'add' && is_null(arg(4)) ): ?>
+        <div class="row">
+          <div class="col-lg-2">
+          <span class="field-title">
+     <?php print render($form['ref']['#title']); ?>
+            &nbsp;<span class="required-note">*</span></span>
+          </div>
+
+          <div class="col-lg-4 pull-left">
+            <?php print render($form['ref']); ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <?php if (arg(4) == 'edit'): ?>
         <div class="row">
           <div class="col-lg-2">
           <span class="field-title">

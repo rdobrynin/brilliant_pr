@@ -1510,7 +1510,7 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
     field_attach_form('brilliant_pr_project', $entity, $form, $form_state);
 //  user access to delete operation, if has permission
 //    ADD CONDITION, IF TASK WITH REFERENCE ID ISSET AND HAVE NOT STATUS 0,2,3,4 RETURN TRUE
-    if (user_access('delete own brilliant_pr_projects')) {
+    if (user_access('delete own brilliant_pr_projects') && arg(3) != 'add') {
       $form['delete'] = array(
         '#type' => 'submit',
         '#value' => t('Delete'),
@@ -1846,7 +1846,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
       );
     }
     //  user access to delete button
-    if (user_access('delete own brilliant_pr_tasks')) {
+    if (user_access('delete own brilliant_pr_tasks') && arg(3) != 'add') {
       $form['remove'] = array(
         '#type' => 'submit',
         '#value' => t('Delete'),
