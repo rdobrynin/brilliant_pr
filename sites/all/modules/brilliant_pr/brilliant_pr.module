@@ -173,11 +173,12 @@ function brilliant_pr_task_uri($basic) {
 
 function brilliant_pr_menu() {
   $items['entity/brilliant_pr_project'] = array(
-    'title' => 'Projects',
+    'title' => 'Current',
     'page callback' => 'brilliant_pr_project_info_page',
 //  access right for viewing projects
     'access arguments' => array('view brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_current.inc',
+    'weight' => -100,
   );
 
   $items['admin/structure/brilliant_pr_project/manage'] = array(
@@ -382,14 +383,37 @@ function brilliant_pr_menu() {
     'access arguments' => array('create brilliant_pr_projects'),
   );
 
+
+  /**
+   * Add new tabs
+   */
+
   $items['entity/brilliant_pr_project/complete'] = array(
-    'title' => 'Complete Projects',
+    'title' => 'Completed',
     'page callback' => 'brilliant_pr_project_list_complete',
     'access arguments' => array('view complete brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_complete.inc',
     'type' => MENU_LOCAL_TASK,
-    'weight' => 1,
+    'weight' => 3,
   );
+  $items['entity/brilliant_pr_project/approve'] = array(
+    'title' => 'For approve',
+    'page callback' => 'brilliant_pr_project_approve_page',
+    'access arguments' => array('view user approved brilliant_pr_projects'),
+    'file' => 'brilliant_pr_project_approve.inc',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+  );
+  $items['entity/brilliant_pr_project/remove'] = array(
+    'title' => 'Deleted',
+    'page callback' => 'brilliant_pr_project_remove_page',
+    'access arguments' => array('view user deleted brilliant_pr_projects'),
+    'file' => 'brilliant_pr_project_admin_remove.inc',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 4,
+  );
+
+
 
   $items['entity/brilliant_pr_task'] = array(
     'title' => 'Tasks',
@@ -412,13 +436,31 @@ function brilliant_pr_menu() {
   );
 //  adding new tab page for complete table
   $items['entity/brilliant_pr_task/complete'] = array(
-    'title' => 'Complete Tasks',
+    'title' => 'Completed Tasks',
     'page callback' => 'brilliant_pr_task_list_complete',
     'access arguments' => array('view complete brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_complete.inc',
     'type' => MENU_LOCAL_TASK,
     'weight' => -90,
   );
+  $items['entity/brilliant_pr_task/approve'] = array(
+    'title' => 'For approve',
+    'page callback' => 'brilliant_pr_task_approve_page',
+    'access arguments' => array('view user approved brilliant_pr_tasks'),
+    'file' => 'brilliant_pr_task_admin_approve.inc',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+  );
+  $items['entity/brilliant_pr_task/remove'] = array(
+    'title' => 'Deleted',
+    'page callback' => 'brilliant_pr_task_remove_page',
+    'access arguments' => array('view user deleted brilliant_pr_tasks'),
+    'file' => 'brilliant_pr_task_admin_remove.inc',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 4,
+  );
+
+
 //  adding new tab page for approve tasks
   $items['admin/structure/brilliant_pr_task/manage/approve'] = array(
     'title' => 'Tasks for approve',
@@ -522,6 +564,14 @@ function brilliant_pr_permission() {
       'title' => t('View Complete Projects'),
       'restrict access' => TRUE,
     ),
+    'view user approved brilliant_pr_projects' => array(
+      'title' => t('View user Approve Projects'),
+      'restrict access' => TRUE,
+    ),
+    'view user deleted brilliant_pr_projects' => array(
+      'title' => t('View user Removed Projects'),
+      'restrict access' => TRUE,
+    ),
 //      permissions for task
     'administer brilliant_pr_tasks' => array(
       'title' => t('Administer Task Entities'),
@@ -535,6 +585,15 @@ function brilliant_pr_permission() {
       'title' => t('View Complete Tasks'),
       'restrict access' => TRUE,
     ),
+    'view user approved brilliant_pr_tasks' => array(
+      'title' => t('View user Approved Tasks'),
+      'restrict access' => TRUE,
+    ),
+    'view user deleted brilliant_pr_tasks' => array(
+      'title' => t('View user Removed Tsks'),
+      'restrict access' => TRUE,
+    ),
+//
     'view own brilliant_pr_tasks' => array(
       'title' => t('View own Tasks'),
       'restrict access' => TRUE,
@@ -581,6 +640,7 @@ function brilliant_pr_permission() {
  */
 
 function brilliant_pr_project_access($op, $entity_type, $entity = NULL, $account = NULL) {
+  global $user;
 //  DRUPAL OOP function  put into variable
   $rights = & drupal_static(__FUNCTION__, array());
 
@@ -652,6 +712,14 @@ function brilliant_pr_project_access($op, $entity_type, $entity = NULL, $account
       return TRUE;
     }
     elseif (user_access('view complete brilliant_pr_projects', $account) && $entity->uid == $account->uid) {
+      $rights[$account->uid][$cid][$op] = TRUE;
+      return TRUE;
+    }
+    elseif (user_access('view user approved brilliant_pr_projects', $account)&& in_array('curator', $user->roles)) {
+      $rights[$account->uid][$cid][$op] = TRUE;
+      return TRUE;
+    }
+    elseif (user_access('view user deleted brilliant_pr_projects', $account) && in_array('curator', $user->roles)) {
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }

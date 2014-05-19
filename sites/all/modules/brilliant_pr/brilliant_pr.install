@@ -232,6 +232,8 @@ function brilliant_pr_install() {
     'edit own brilliant_pr_projects',
     'delete any brilliant_pr_projects',
     'delete own brilliant_pr_projects',
+    'view user approved brilliant_pr_projects',
+    'view user deleted brilliant_pr_projects',
     'access site in maintenance mode',
     'block IP addresses',
     'administer taxonomy',
@@ -253,6 +255,8 @@ function brilliant_pr_install() {
     'access administration menu',
     'view complete brilliant_pr_tasks',
     'restore_delete_brilliant_pr_tasks',
+    'view user approved brilliant_pr_tasks',
+    'view user deleted brilliant_pr_tasks',
 //    user administer permissions
     'administer permissions',
     'administer users',
