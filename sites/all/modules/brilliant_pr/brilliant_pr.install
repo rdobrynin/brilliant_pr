@@ -252,7 +252,6 @@ function brilliant_pr_install() {
     'remove brilliant_pr_tasks',
     'edit own brilliant_pr_tasks',
     'delete any brilliant_pr_tasks',
-    'access administration menu',
     'restore_delete_brilliant_pr_tasks',
     'view user completed brilliant_pr_tasks',
     'view user approved brilliant_pr_tasks',
@@ -261,7 +260,6 @@ function brilliant_pr_install() {
     'administer permissions',
     'administer users',
     'administer menu',
-    'access administration pages',
 //    view user profiles
     'access user profiles',
     'change own username',

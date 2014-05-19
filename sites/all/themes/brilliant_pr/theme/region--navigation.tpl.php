@@ -56,27 +56,16 @@ global $base_url;
 
 
         <!--        add select list-->
-        <?php if (arg(1) == 'brilliant_pr_project' && $user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
+
+        <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_project/manage/approve">Approve projects</a></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_project/manage">Current projects</a></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_project/manage/complete">Complete projects</a></li>
+              <li><a href="<?php print $base_url;?>/admin/people">Administer users</a></li>
+              <li><a href="<?php print $base_url;?>/admin/people/create">Add user</a></li>
+              <li><a href="<?php print $base_url;?>/admin/people/permissions">Permissions</a></li>
               <li class="divider"></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_project/manage/remove">Deleted projects</a></li>
-            </ul>
-          </div>
-        <?php endif; ?>
-        <?php if (arg(1) == 'brilliant_pr_task' && $user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
-          <div class="btn-group select-nav-top">
-            <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/approve">Approve tasks</a></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage">Current tasks</a></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/complete">Complete tasks</a></li>
-              <li class="divider"></li>
-              <li><a href="<?php print $base_url;?>/admin/structure/brilliant_pr_task/manage/remove">Deleted tasks</a></li>
+              <li><a href="<?php print $base_url;?>/admin/config/people/accounts"><?php print t('Account settings')?></a></li>
             </ul>
           </div>
         <?php endif; ?>
