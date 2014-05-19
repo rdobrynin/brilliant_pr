@@ -236,7 +236,7 @@ function brilliant_pr_menu() {
   );
 
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/view'] = array(
-    'title' => 'Common information',
+    'title callback' => 'brilliant_pr_project_name',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'access arguments' => array('view own brilliant_pr_projects'),
     'weight' => -10,
@@ -304,7 +304,8 @@ function brilliant_pr_menu() {
   );
 //  tab for referenced tasks for this project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/tasks'] = array(
-    'title' => 'Current Tasks',
+    'title callback' => 'brilliant_pr_project_current_tasks',
+    'title arguments' => array(1),
     'page callback' => 'brilliant_pr_ref_view',
     'access arguments' => array('edit brilliant_pr_projects'),
     'type' => MENU_LOCAL_TASK,
@@ -847,6 +848,43 @@ function brilliant_pr_task_entity_load($entities, $type) {
 function brilliant_pr_project_title($entity) {
   return t('@title', array('@title' => $entity->title));
 }
+
+
+/** title of current task and calucalion of total tasks for current project
+ * @return null|string
+ */
+
+function brilliant_pr_project_current_tasks() {
+$arg = arg(3);
+  if(is_numeric(arg(3))) {
+    $tasks = brilliant_pr_task_load_multiple();
+    $counter = 0;
+    foreach ($tasks as $task) {
+      if ($arg == $task->ref) {
+        $counter++;
+      }
+    }
+    $title = 'Current tasks ('.$counter.')';
+  }
+  else {
+    $title = 'Current tasks';
+  }
+
+//  $title = '<span class="badge">'.$counter.'</span>';
+
+ return $title;
+}
+
+
+
+
+function brilliant_pr_project_name() {
+//  $title = '<span class="badge">'.$counter.'</span>';
+  $title = check_plain(menu_get_active_title());
+  return $title;
+}
+
+
 
 /**
  * Callback for a task title when this entity is displayed.
