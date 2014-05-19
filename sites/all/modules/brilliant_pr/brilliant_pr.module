@@ -390,7 +390,7 @@ function brilliant_pr_menu() {
   $items['entity/brilliant_pr_project/complete'] = array(
     'title' => 'Completed',
     'page callback' => 'brilliant_pr_project_list_complete',
-    'access arguments' => array('view complete brilliant_pr_projects'),
+    'access arguments' => array('view user completed brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_complete.inc',
     'type' => MENU_LOCAL_TASK,
     'weight' => 3,
@@ -434,7 +434,7 @@ function brilliant_pr_menu() {
   $items['entity/brilliant_pr_task/complete'] = array(
     'title' => 'Completed Tasks',
     'page callback' => 'brilliant_pr_task_list_complete',
-    'access arguments' => array('view complete brilliant_pr_tasks'),
+    'access arguments' => array('view user completed brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_complete.inc',
     'type' => MENU_LOCAL_TASK,
     'weight' => -90,
@@ -554,12 +554,12 @@ function brilliant_pr_permission() {
       'title' => t('Delete/Restore All Projects'),
       'restrict access' => TRUE,
     ),
-    'view complete brilliant_pr_projects' => array(
-      'title' => t('View Complete Projects'),
+    'view user completed brilliant_pr_projects' => array(
+      'title' => t('View user Completed Projects'),
       'restrict access' => TRUE,
     ),
     'view user approved brilliant_pr_projects' => array(
-      'title' => t('View user Approve Projects'),
+      'title' => t('View user Approved Projects'),
       'restrict access' => TRUE,
     ),
     'view user deleted brilliant_pr_projects' => array(
@@ -575,8 +575,8 @@ function brilliant_pr_permission() {
       'title' => t('View Task'),
       'restrict access' => TRUE,
     ),
-    'view complete brilliant_pr_tasks' => array(
-      'title' => t('View Complete Tasks'),
+    'view user completed brilliant_pr_tasks' => array(
+      'title' => t('View user Completed Tasks'),
       'restrict access' => TRUE,
     ),
     'view user approved brilliant_pr_tasks' => array(
@@ -584,7 +584,7 @@ function brilliant_pr_permission() {
       'restrict access' => TRUE,
     ),
     'view user deleted brilliant_pr_tasks' => array(
-      'title' => t('View user Removed Tsks'),
+      'title' => t('View user Removed Tasks'),
       'restrict access' => TRUE,
     ),
 //
@@ -705,15 +705,15 @@ function brilliant_pr_project_access($op, $entity_type, $entity = NULL, $account
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
-    elseif (user_access('view complete brilliant_pr_projects', $account) && $entity->uid == $account->uid) {
+    elseif (user_access('view user completed brilliant_pr_projects', $account) && $entity->uid == $account->uid) {
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
-    elseif (user_access('view user approved brilliant_pr_projects', $account)&& in_array('curator', $user->roles)) {
+    elseif (user_access('view user approved brilliant_pr_projects', $account) && $entity->uid == $account->uid) {
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
-    elseif (user_access('view user deleted brilliant_pr_projects', $account) && in_array('curator', $user->roles)) {
+    elseif (user_access('view user deleted brilliant_pr_projects', $account) && $entity->uid == $account->uid) {
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
@@ -796,7 +796,7 @@ function brilliant_pr_task_access($op, $entity_type, $entity = NULL, $account = 
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
-    elseif (user_access('view complete brilliant_pr_tasks', $account) && $entity->uid == $account->uid) {
+    elseif (user_access('view user completed brilliant_pr_tasks', $account) && $entity->uid == $account->uid) {
       $rights[$account->uid][$cid][$op] = TRUE;
       return TRUE;
     }
