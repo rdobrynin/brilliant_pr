@@ -1767,6 +1767,31 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
       );
 
     } // end if
+    elseif($user->uid == in_array('customer', $user->roles)) {
+
+      //    Fetch list of implementors
+      $implementor = user_role_load_by_name('implementor');
+      $result = db_select('users_roles', 'ur')
+        ->fields('ur', array('uid'))
+        ->condition('rid', $implementor->rid)
+        ->execute();
+      $implementors = array();
+      foreach ($result as $one_user) {
+        $user_record = get_name($one_user->uid);
+        $implementors[$one_user->uid] = $user_record;
+      }
+
+      $form['implementor'] = array(
+        '#type' => 'select',
+        '#options' => $implementors,
+        '#title' => t('Implementor'),
+        '#description' => t('Implementor of task'),
+        '#default_value' => isset($entity->implementor) ? $entity->implementor : '',
+        '#required' => TRUE,
+        '#weight' => -70,
+      );
+
+    }
     $form['opt_time'] = array(
       '#type' => 'date_popup',
       '#title' => t('OPT'),
@@ -2355,6 +2380,16 @@ function brilliant_pr_task_form_submit($form, &$form_state) {
     $field_key_cur = $form_state['values']['curator'];
     $result_curator = $form['curator']['#options'][$field_key_cur];
     $username_curator = get_user_curator($result_curator);
+    $entity->curator = $username_curator;
+    $field_key_imp = $form_state['values']['implementor'];
+    $result_implementor = $form['implementor']['#options'][$field_key_imp];
+    $username_implementor = get_user_implementor($result_implementor);
+    $entity->implementor = $username_implementor;
+  }
+
+  elseif($user->uid == in_array('customer', $user->roles)) {
+    $project = brilliant_pr_project_load($pid = $entity->ref);
+    $username_curator = $project->curator;
     $entity->curator = $username_curator;
     $field_key_imp = $form_state['values']['implementor'];
     $result_implementor = $form['implementor']['#options'][$field_key_imp];
