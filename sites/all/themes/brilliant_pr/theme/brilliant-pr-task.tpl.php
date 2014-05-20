@@ -72,18 +72,10 @@
  *
  * @ingroup themeable
  */
-
 ?>
 <?php
 $content = $element->content;
 ?>
-  <!--<div class="row-fluid">-->
-  <!--  <div class="span8">-->
-  <!--   --><?// print render($content['description']); ?>
-  <!--    --><?php //print drupal_render_children($content); ?>
-  <!--  </div>-->
-  <!--</div>-->
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['description']['#title']); ?></span>
@@ -92,8 +84,6 @@ $content = $element->content;
       <?php  print render($content['description']['#markup']); ?>
     </div>
   </div>
-
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['curator']['#title']); ?></span>
@@ -102,7 +92,6 @@ $content = $element->content;
       <?php  print render($content['curator']['#markup']); ?>
     </div>
   </div>
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['company']['#title']); ?></span>
@@ -111,7 +100,6 @@ $content = $element->content;
       <?php  print render($content['company']['#markup']); ?>
     </div>
   </div>
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['customer_name']['#title']); ?></span>
@@ -120,7 +108,6 @@ $content = $element->content;
       <?php  print render($content['customer_name']['#markup']); ?>
     </div>
   </div>
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-3">
       <span class="title_view"> <?php  print render($content['opt_time']['#title']); ?></span>
@@ -135,7 +122,6 @@ $content = $element->content;
       <?php  print render($content['dead_time']['#markup']); ?>
     </div>
   </div>
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['status']['#title']); ?></span>
@@ -144,7 +130,6 @@ $content = $element->content;
       <?php  print render($content['status']['#markup']); ?>
     </div>
   </div>
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['created']['#title']); ?></span>
@@ -159,5 +144,4 @@ $content = $element->content;
       <?php  print render($content['changed']['#markup']); ?>
     </div>
   </div>
-
 <?php //print drupal_render_children($content); ?>

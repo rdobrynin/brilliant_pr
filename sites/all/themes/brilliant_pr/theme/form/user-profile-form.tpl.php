@@ -23,8 +23,6 @@ hide($form['actions']['cancel']);
           print render($form['field_last_name'][LANGUAGE_NONE][0]['value']); ?>
         </div>
       </div>
-
-
       <div class="row user_edit_profile">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['field_phone'][LANGUAGE_NONE]['#title']); ?></span>
@@ -33,7 +31,6 @@ hide($form['actions']['cancel']);
           <?php print render($form['field_phone'][LANGUAGE_NONE][0]['value']); ?>
         </div>
       </div>
-
       <div class="row user_edit_profile">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['account']['name']['#title']); ?></span>
@@ -42,7 +39,6 @@ hide($form['actions']['cancel']);
           <?php print render($form['account']['name']); ?>
         </div>
       </div>
-
       <div class="row user_edit_profile">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['account']['current_pass']['#title']); ?></span>
@@ -51,7 +47,6 @@ hide($form['actions']['cancel']);
           <?php print render($form['account']['current_pass']); ?>
         </div>
       </div>
-
       <div class="row user_edit_profile">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['account']['mail']['#title']); ?></span>
@@ -60,7 +55,6 @@ hide($form['actions']['cancel']);
           <?php print render($form['account']['mail']); ?>
         </div>
       </div>
-
       <div class="row user_edit_profile">
         <div class="col-lg-6">
           <span class="field-title"><?php print render($form['account']['pass']); ?></span>
@@ -72,9 +66,6 @@ hide($form['actions']['cancel']);
           <span class="field-title"><?php print render($form['actions']['submit']); ?><?php print render($form['actions']['cancel']); ?></span>
         </div>
       </div>
-
-
-
     </fieldset>
   </div>
 </div>

@@ -1511,12 +1511,30 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
 //  user access to delete operation, if has permission
 //    ADD CONDITION, IF TASK WITH REFERENCE ID ISSET AND HAVE NOT STATUS 0,2,3,4 RETURN TRUE
     if (user_access('delete own brilliant_pr_projects') && arg(3) != 'add') {
+
+      $ref = arg(3);
+      $result = db_select('brilliant_pr_task', 'bp')
+        ->fields('bp')
+//        if tasks without status complete
+        ->condition('status', '1', '!=')
+//        if tasks without status remove
+        ->condition('status', '5', '!=')
+        ->condition('ref', $ref, '=')
+        ->execute();
+      $task = array();
+      foreach ($result as $tasks) {
+        $task[$tasks->status] = $tasks->status;
+      }
+
+
+      if (empty($task)) {
       $form['delete'] = array(
         '#type' => 'submit',
         '#value' => t('Delete'),
         '#submit' => array('brilliant_pr_project_edit_delete'),
         '#weight' => 200,
       );
+      }
     }
 //    ADD CONDITION, IF PROJECT HAS UNCOMPLETED TASKS -> RETURN FALSE, OTHERWISE -> RETURN BUTTON "REMOVE"
     if (user_access('remove own brilliant_pr_projects')) {

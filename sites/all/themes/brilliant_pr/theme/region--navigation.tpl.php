@@ -53,19 +53,16 @@ global $base_url;
       <nav role="navigation">
         <?php print render($page['primary_nav']); ?>
         <?php print render($page['secondary_nav']); ?>
-
-
         <!--        add select list-->
-
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="<?php print $base_url;?>/admin/people">Administer users</a></li>
-              <li><a href="<?php print $base_url;?>/admin/people/create">Add user</a></li>
-              <li><a href="<?php print $base_url;?>/admin/people/permissions">Permissions</a></li>
+              <li><a href="<?php print $base_url;?>/admin/people"><?php print t('Administer users');?></a></li>
+              <li><a href="<?php print $base_url;?>/admin/people/create"><?php print t('Add user');?></a></li>
+              <li><a href="<?php print $base_url;?>/admin/people/permissions"><?php print t('Permissions');?></a></li>
               <li class="divider"></li>
-              <li><a href="<?php print $base_url;?>/admin/config/people/accounts"><?php print t('Account settings')?></a></li>
+              <li><a href="<?php print $base_url;?>/admin/config/people/accounts"><?php print t('Account settings');?></a></li>
             </ul>
           </div>
         <?php endif; ?>
@@ -75,23 +72,14 @@ global $base_url;
         <?php if (arg(1) == 'brilliant_pr_project' &&  $user->uid != in_array('implementor', $user->roles) && arg(3) == 'add'): ?>
           <span id="create-project">  <a href="<?php print $base_url;?>/entity/brilliant_pr_project/basic/add"><button type="button" class="btn btn-success" disabled='disabled' id="create-project-btn"><span class="glyphicon glyphicon-plus">&nbsp;</span><?php print t('Create project');?></button></a></span>
         <?php endif; ?>
-
-
         <?php if (arg(1) == 'brilliant_pr_task' && arg(3) != 'add'): ?>
           <span id="create-project">  <a href="<?php print $base_url;?>/entity/brilliant_pr_task/basic/add"><button type="button" class="btn btn-success" id="create-project-btn"><span class="glyphicon glyphicon-plus">&nbsp;</span><?php print t('Create task');?></button></a></span>
         <?php endif; ?>
         <?php if (arg(1) == 'brilliant_pr_task'  && arg(3) == 'add'): ?>
           <span id="create-project">  <a href="<?php print $base_url;?>/entity/brilliant_pr_task/basic/add"><button type="button" class="btn btn-success" disabled='disabled' id="create-project-btn"><span class="glyphicon glyphicon-plus">&nbsp;</span><?php print t('Create task');?></button></a></span>
         <?php endif; ?>
-
         <?php print $content; ?>
       </nav>
-<!--  --><?php //if($user->uid == 0) {
-//    print '<span class="pull-right">Login</span>';
-//  }
-//  ?>
-
-
     </div>
     <?php endif; ?>
     <?php if ($content_attributes): ?></div><?php endif; ?>

@@ -57,7 +57,7 @@ hide($form['remove']);
       </div>
         <div class="row">
           <div class="col-lg-2">
-            <button class="btn btn-success" disabled="disabled">Add new contact person</button>
+            <button class="btn btn-success" disabled="disabled"><?php print t('Add new contact person')?></button>
           </div>
 
         </div>
@@ -91,7 +91,8 @@ hide($form['remove']);
         <div class="row">
           <div class="col-lg-12 text-right">
             <span class="field-title"><?php print render($form['submit']); ?><?php print render($form['submit_task']); ?>
-              <?php print render($form['remove']); ?><?php print render($form['delete']); ?><?php print render($form['cancel']); ?></span>
+              <?php print render($form['remove']); ?>
+              <?php print render($form['delete']); ?><?php print render($form['cancel']); ?></span>
           </div>
         </div>
       </div>

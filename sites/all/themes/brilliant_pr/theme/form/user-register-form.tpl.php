@@ -10,7 +10,6 @@
 $form['actions']['submit']["#attributes"]['class'][] = 'btn-success btn-max';
 hide($form['actions']['submit']);
 ?>
-
      <div class="row p-top">
        <div class="col-lg-6">
          <?php print render($form['field_first_name'][LANGUAGE_NONE][0]['value']); ?>
@@ -41,8 +40,6 @@ hide($form['actions']['submit']);
          <?php print render($form['account']['pass']['pass2']); ?>
        </div>
      </div>
-
-
   <div class="row p-top">
     <div class="col-lg-6">
       <?php print render($form['account']['roles']); ?>
@@ -51,7 +48,6 @@ hide($form['actions']['submit']);
       <?php print render($form['account']['status']); ?>
     </div>
   </div>
-
 <?php print drupal_render_children($form); ?>
   <div class="row p-top">
     <div class="col-lg-12 text-center">

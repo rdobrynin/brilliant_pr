@@ -77,27 +77,20 @@
 <?php if ($page['navigation']): ?>
   <?php print render($page['navigation']); ?>
 <?php endif; ?>
-
 <div class="main-container container">
-
   <?php /* region--header.tpl.php */ ?>
   <?php print render($page['header']); ?>
-
   <div class="row">
-
     <?php /* region--sidebar.tpl.php */ ?>
     <?php if ($page['sidebar_first']): ?>
       <?php print render($page['sidebar_first']); ?>
     <?php endif; ?>
-
     <?php /* region--content.tpl.php */ ?>
     <?php print render($page['content']); ?>
-
     <?php /* region--sidebar.tpl.php */ ?>
     <?php if ($page['sidebar_second']): ?>
       <?php print render($page['sidebar_second']); ?>
     <?php endif; ?>
-
   </div>
 </div>
 <?php /* region--footer.tpl.php */ ?>

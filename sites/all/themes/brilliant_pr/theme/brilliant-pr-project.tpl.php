@@ -91,13 +91,6 @@ $curator_username = get_user_curator($content['curator']['#markup']);
 $curator_fields = user_load_by_name($curator_username);
 
 ?>
-  <!--<div class="row-fluid">-->
-  <!--  <div class="span8">-->
-  <!--   --><?// print render($content['description']); ?>
-  <!--    --><?php //print drupal_render_children($content); ?>
-  <!--  </div>-->
-  <!--</div>-->
-
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php print render($content['description']['#title']); ?></span>
@@ -106,8 +99,6 @@ $curator_fields = user_load_by_name($curator_username);
       <?php  print render($content['description']['#markup']); ?>
     </div>
   </div>
-
-
 <div class="user_edit_profile">
   <div class="row p-top">
     <div class="col-lg-2">
@@ -153,7 +144,6 @@ $curator_fields = user_load_by_name($curator_username);
     <div class="col-lg-1 text-left">
       <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
     </div>
-
   </div>
 </div>
   <div class="row">
@@ -184,6 +174,4 @@ $curator_fields = user_load_by_name($curator_username);
       <?php  print render($content['changed']['#markup']); ?>
     </div>
   </div>
-
-
 <?php //print drupal_render_children($content); ?>
