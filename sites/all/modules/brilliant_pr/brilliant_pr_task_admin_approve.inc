@@ -74,6 +74,7 @@ function brilliant_pr_task_approve_page() {
       )
     );
   }
+
   else {
     $content = '<div class="alert alert-info a-message">'.t('Not found any tasks for approve.') .'</div>';
     $html = $content;

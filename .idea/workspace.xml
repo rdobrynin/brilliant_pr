@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_admin_approve.inc" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_admin_approve.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_current.inc" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_current.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +66,7 @@
           <file leaf-file-name="brilliant_pr_task_admin_approve.inc" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_admin_approve.inc">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="59" column="14" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.40494937" vertical-offset="666" max-vertical-offset="2311">
+                <state line="76" column="2" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.74915636" vertical-offset="666" max-vertical-offset="2329">
                   <folding />
                 </state>
               </provider>
@@ -962,7 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_admin_approve.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="14" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.40494937" vertical-offset="666" max-vertical-offset="2311">
+        <state line="76" column="2" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.74915636" vertical-offset="666" max-vertical-offset="2329">
           <folding />
         </state>
       </provider>
