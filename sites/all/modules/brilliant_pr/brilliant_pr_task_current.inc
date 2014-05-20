@@ -181,7 +181,8 @@ function brilliant_pr_task_info_page() {
       }
     }
   } #end foreach
-  if (!empty($entity) && $user->uid && $account = user_load($entity->uid)) {
+  if ($user->name == $project_entity->customer_name || $user->name == $entity->implementor || in_array('administrator', $user->roles) ||
+    $user->name == $project_entity->curator) {
     $content = '';
     $html = $content . theme('table',
         array(

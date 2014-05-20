@@ -31,7 +31,7 @@ function brilliant_pr_task_approve_page() {
       'created',
       'opt_time',
       'dead_time',
-      'uid',
+      'uid'
     ));
   $results = $query
     ->execute();
@@ -39,7 +39,7 @@ function brilliant_pr_task_approve_page() {
   foreach ($results as $entity) {
     $project_entity = brilliant_pr_project_load($pid = $entity->ref);
     $customer_name = user_load_by_name($project_entity->customer_name);
-    if ($user->uid && $account = user_load($entity->uid) && $user->name == $project_entity->curator) {
+    if ($user->uid && $account = user_load($entity->uid) && $user->name == $project_entity->curator || in_array('administrator', $user->roles)) {
       $rows[] = array(
         'data' => array(
           $entity->tid,
@@ -54,7 +54,7 @@ function brilliant_pr_task_approve_page() {
       #end row[]
     }
   } #end foreach
-  if (!empty($entity)) {
+  if (!empty($entity) && $user->name == $project_entity->curator || in_array('administrator', $user->roles)) {
     $content ='';
     $html = $content . theme('table',
         array(
@@ -78,5 +78,6 @@ function brilliant_pr_task_approve_page() {
     $content = '<div class="alert alert-info a-message">'.t('Not found any tasks for approve.') .'</div>';
     $html = $content;
   }
+
   return ($html);
 }
