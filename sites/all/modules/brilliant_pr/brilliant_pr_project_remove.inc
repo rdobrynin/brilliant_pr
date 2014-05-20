@@ -89,7 +89,7 @@ function brilliant_pr_project_remove_page() {
       }
     }
   } #end foreach
-  if (!empty($entity)) {
+  if (!empty($entity) && $user->name == $entity->curator  || in_array('administrator', $user->roles)) {
     $content = '';
     if (in_array('administrator', $user->roles)) {
       $content .= l(t('Purge all projects'), 'entity/brilliant_pr_project/basic/delete_all') . '<br>' .

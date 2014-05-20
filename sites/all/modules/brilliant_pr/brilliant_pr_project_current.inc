@@ -136,7 +136,7 @@ function brilliant_pr_project_info_page() {
       }
     }
   } #end foreach
-  if (!empty($entity) && $user->uid && $account = user_load($entity->uid)) {
+  if (!empty($entity) && $user->name == $entity->curator || !empty($entity) && $user->name == $entity->customer_name || in_array('administrator', $user->roles)) {
     $content = '';
     $html = $content . theme('table',
         array(

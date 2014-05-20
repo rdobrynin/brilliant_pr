@@ -8,11 +8,6 @@
 function brilliant_pr_task_remove_page() {
   global $user;
   $content = array();
-  $content[] = array(
-    '#type' => 'item',
-    '#markup' => t('Hello') . ', ' . get_name($user->uid),
-  );
-
 // only Administrator can restore or delete all projects with status remove
   if (in_array('administrator', $user->roles)) {
     $content[] = array(

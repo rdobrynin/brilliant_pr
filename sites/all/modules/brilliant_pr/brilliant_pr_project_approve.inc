@@ -92,7 +92,7 @@ function brilliant_pr_project_approve_page() {
       }
     }
   } #end foreach
-  if (!empty($entity)) {
+  if (!empty($entity) && $user->name == $entity->curator || in_array('administrator', $user->roles)) {
     $content = '';
     $html = $content . theme('table',
         array(
