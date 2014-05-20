@@ -2387,6 +2387,7 @@ function brilliant_pr_task_form_submit($form, &$form_state) {
     $entity->implementor = $username_implementor;
   }
 
+
   elseif($user->uid == in_array('customer', $user->roles)) {
     $project = brilliant_pr_project_load($pid = $entity->ref);
     $username_curator = $project->curator;
