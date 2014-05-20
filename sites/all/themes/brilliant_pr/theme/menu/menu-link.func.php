@@ -55,10 +55,10 @@ function brilliant_pr_menu_link(array $variables) {
   }
   if($element["#theme"] == 'menu_link__user_menu'){
     if($element["#href"] == 'user'){
-      $element['#title'] = '<span style="color:#47a447;">'._bootstrap_icon('user').'</span>'.' '.get_name($user->uid);
+      $element['#title'] = '<span>'._bootstrap_icon('user').'</span>'.' '.get_name($user->uid);
     }
     if($element["#href"] == 'user/logout'){
-      $element['#title'] = '<span style="color:#47a447;">'._bootstrap_icon('log-out').'</span>'.' '.$element['#title'];
+      $element['#title'] = '<span>'._bootstrap_icon('log-out').'</span>'.' '.$element['#title'];
     }
     if($element["#href"] == 'user/login'){
       $element['#title'] = _bootstrap_icon('log-in').' '.$element['#title'];
