@@ -304,8 +304,7 @@ function brilliant_pr_menu() {
   );
 //  tab for referenced tasks for this project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/tasks'] = array(
-    'title callback' => 'brilliant_pr_project_current_tasks',
-    'title arguments' => array(1),
+    'title' => 'Current tasks',
     'page callback' => 'brilliant_pr_ref_view',
     'access arguments' => array('edit brilliant_pr_projects'),
     'type' => MENU_LOCAL_TASK,
@@ -850,32 +849,32 @@ function brilliant_pr_project_title($entity) {
 }
 
 
-/** title of current task and calucalion of total tasks for current project
- * @return null|string
- */
-
-function brilliant_pr_project_current_tasks() {
-$arg = arg(3);
-  if(is_numeric(arg(3))) {
-    $tasks = brilliant_pr_task_load_multiple();
-    $counter = 0;
-    foreach ($tasks as $task) {
-      if ($arg == $task->ref) {
-        $counter++;
-      }
-    }
-    if($counter !=0) {
-      $title = 'Current tasks ('.$counter.')';
-    }
-    else {
-      $title = 'No tasks';
-    }
-  }
-  else {
-    $title = 'Current tasks';
-  }
- return $title;
-}
+///** title of current task and calucalion of total tasks for current project
+// * @return null|string
+// */
+//
+//function brilliant_pr_project_current_tasks() {
+//$arg = arg(3);
+//  if(is_numeric(arg(3))) {
+//    $tasks = brilliant_pr_task_load_multiple();
+//    $counter = 0;
+//    foreach ($tasks as $task) {
+//      if ($arg == $task->ref) {
+//        $counter++;
+//      }
+//    }
+//    if($counter !=0) {
+//      $title = 'Current tasks ('.$counter.')';
+//    }
+//    else {
+//      $title = 'No tasks';
+//    }
+//  }
+//  else {
+//    $title = 'Current tasks';
+//  }
+// return $title;
+//}
 
 
 
@@ -3095,11 +3094,27 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
-
 function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {
   // Add an action linking to node/add to all pages.
-dsm($data);
-$data['tabs'][0]['output'][2]['#link']['title'] = 'test';
+  $arg = arg(3);
+  if(is_numeric(arg(3))) {
+    $tasks = brilliant_pr_task_load_multiple();
+    $counter = 0;
+    foreach ($tasks as $task) {
+      if ($arg == $task->ref) {
+        $counter++;
+      }
+    }
+    if($counter !=0) {
+      $title = $counter;
+      $data['tabs'][0]['output'][2]['#link']['title'] = 'Current tasks'. ' '.'<span id="task_counter" class="badge">'.$title.'</span>';
+    }
+    else {
+      $title = 0;
+      $data['tabs'][0]['output'][2]['#link']['title'] = 'Current tasks';
+    }
+
+  }
   $data['tabs'][0]['output'][2]['#link']['localized_options']['html'] = TRUE;
   // Add a tab linking to node/add to all pages.
 //  $data['tabs'][0]['output'][] = array(
