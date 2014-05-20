@@ -63,6 +63,9 @@ function brilliant_pr_menu_link(array $variables) {
     if($element["#href"] == 'user/login'){
       $element['#title'] = _bootstrap_icon('log-in').' '.$element['#title'];
     }
+//    if($element["#href"] == 'entity/brilliant_pr_project/basic/%/tasks'){
+//      $element['#title'] = _bootstrap_icon('log-in').' '.$element['#title'];
+//    }
     $element['#localized_options']['html'] = true;
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);

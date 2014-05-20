@@ -3094,3 +3094,26 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
 //    dsm($form);
   }
 }
+
+
+function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  // Add an action linking to node/add to all pages.
+dsm($data);
+$data['tabs'][0]['output'][2]['#link']['title'] = 'test';
+  $data['tabs'][0]['output'][2]['#link']['localized_options']['html'] = TRUE;
+  // Add a tab linking to node/add to all pages.
+//  $data['tabs'][0]['output'][] = array(
+//    '#theme' => 'menu_local_task',
+//    '#link' => array(
+//      'title' => t('Example tab'),
+//      'href' => 'node/add',
+//      'localized_options' => array(
+//        'attributes' => array(
+//          'title' => t('Add new content'),
+//        ),
+//      ),
+//    ),
+//
+//    '#active' => ($router_item['path'] == $root_path),
+//  );
+}
