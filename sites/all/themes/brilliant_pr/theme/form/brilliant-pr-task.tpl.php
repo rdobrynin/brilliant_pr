@@ -59,7 +59,6 @@ global $user;
         </div>
       </div>
       <?php endif; ?>
-      <?php if ($user->uid != in_array('customer', $user->roles)): ?>
       <div class="row">
       <div class="col-lg-2">
           <span class="field-title">
@@ -70,7 +69,6 @@ global $user;
         <?php print render($form['implementor']); ?>
       </div>
   </div>
-      <?php endif; ?>
       <div class="row">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['description']['#title']); ?></span>

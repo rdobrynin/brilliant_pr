@@ -973,7 +973,7 @@ function brilliant_pr_project_view($entity, $view_mode = 'pid') {
     $entity->content['dead_time'] = array(
       '#type' => 'item',
       '#title' => t('Deadline date to complete project'),
-      '#markup' => '<p style="color:red;">' . format_date($entity->dead_time, $type = 'medium', $format = 'Y/m/d', $timezone = NULL, $langcode = NULL) . '</p>',
+      '#markup' => '<p>' . format_date($entity->dead_time, $type = 'medium', $format = 'Y/m/d', $timezone = NULL, $langcode = NULL) . '</p>',
 
     );
     $entity->content['status'] = array(
@@ -1035,7 +1035,7 @@ function brilliant_pr_project_view($entity, $view_mode = 'pid') {
     $entity->content['dead_time'] = array(
       '#type' => 'item',
       '#title' => t('Deadline date to complete project'),
-      '#markup' => '<p style="color:red;">' . format_date($entity->dead_time, $type = 'medium', $format = 'Y/m/d', $timezone = NULL, $langcode = NULL) . '</p>',
+      '#markup' => '<p>' . format_date($entity->dead_time, $type = 'medium', $format = 'Y/m/d', $timezone = NULL, $langcode = NULL) . '</p>',
 
     );
     $entity->content['status'] = array(

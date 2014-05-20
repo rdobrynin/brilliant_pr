@@ -5,12 +5,10 @@
  * @return array
  */
 
-function brilliant_pr_ref_view() {
-  global $user;
-  $content = array();
-  $content[] = array(
-    '#type' => 'item',
-    '#markup' => t('Hello') . ', ' . get_name($user->uid),
+function brilliant_pr_ref_view($view_mode = 'tid') {
+
+  $content = array(
+    '#view_mode' => $view_mode,
   );
 
   $content[] = array(
