@@ -877,7 +877,9 @@ function brilliant_pr_project_title($entity) {
 //}
 
 
-
+/**
+ * @return string
+ */
 
 function brilliant_pr_project_name() {
 //  $title = '<span class="badge">'.$counter.'</span>';
@@ -1090,6 +1092,11 @@ function brilliant_pr_task_view($entity, $view_mode = 'tid') {
   entity_prepare_view($entity_type, array($entity->tid => $entity));
   $entity->content += field_attach_view($entity_type, $entity, $view_mode);
   $project = brilliant_pr_project_load($pid = $entity->ref);
+
+
+
+$customer_uid = user_load_by_name($project->customer_name);
+
 //  if need to make permission for manager route (for example) we add condition for this role *************************************
   if ($user->uid == $entity->uid OR $user->name == $entity->implementor && $entity->status != 0 || in_array('administrator', $user->roles) && $entity->status != 0 || $user->name == $project->curator
     || $user->name == $project->customer_name && $entity->status != 0
@@ -1113,6 +1120,16 @@ function brilliant_pr_task_view($entity, $view_mode = 'tid') {
         );
       }
     }
+    $entity->content['company'] = array(
+      '#type' => 'item',
+      '#title' => t('Company title'),
+      '#markup' => $project->company,
+    );
+    $entity->content['customer_name'] = array(
+      '#type' => 'item',
+      '#title' => t('Customer\'s name'),
+      '#markup' => get_name($customer_uid->uid),
+    );
     $entity->content['opt_time'] = array(
       '#type' => 'item',
       '#title' => t('Optimal time to complete task'),
