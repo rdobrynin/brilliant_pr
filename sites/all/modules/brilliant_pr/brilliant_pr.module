@@ -1092,10 +1092,7 @@ function brilliant_pr_task_view($entity, $view_mode = 'tid') {
   entity_prepare_view($entity_type, array($entity->tid => $entity));
   $entity->content += field_attach_view($entity_type, $entity, $view_mode);
   $project = brilliant_pr_project_load($pid = $entity->ref);
-
-
-
-$customer_uid = user_load_by_name($project->customer_name);
+  $customer_uid = user_load_by_name($project->customer_name);
 
 //  if need to make permission for manager route (for example) we add condition for this role *************************************
   if ($user->uid == $entity->uid OR $user->name == $entity->implementor && $entity->status != 0 || in_array('administrator', $user->roles) && $entity->status != 0 || $user->name == $project->curator
@@ -1120,6 +1117,11 @@ $customer_uid = user_load_by_name($project->customer_name);
         );
       }
     }
+    $entity->content['ref'] = array(
+      '#type' => 'item',
+      '#title' => t('Project ref'),
+      '#markup' => $entity->ref,
+    );
     $entity->content['company'] = array(
       '#type' => 'item',
       '#title' => t('Company title'),

@@ -81,6 +81,7 @@ $content['customer_name']['#title'] = t('Contact person');
 $content['opt_time']['#title'] = t('Optimal date');
 $content['dead_time']['#title'] = t('Deadline date');
 $content['description']['#title'] = t('Description');
+$content['ref']['#title'] = t('Project ref');
 //get implementor profile
 $implementor_username = get_user_implementor($content['implementor']['#markup']);
 $implementor_fields = user_load_by_name($implementor_username);
@@ -97,6 +98,14 @@ $curator_fields = user_load_by_name($curator_username);
     </div>
     <div class="col-lg-10">
       <?php  print render($content['description']['#markup']); ?>
+    </div>
+  </div>
+  <div class="row p-top user_edit_profile">
+    <div class="col-lg-2">
+      <span class="title_view"> <?php print render($content['ref']['#title']); ?></span>
+    </div>
+    <div class="col-lg-10">
+      <?php  print render($content['ref']['#markup']); ?>
     </div>
   </div>
   <div class="user_edit_profile">
