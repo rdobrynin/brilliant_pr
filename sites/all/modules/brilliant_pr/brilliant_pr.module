@@ -173,7 +173,7 @@ function brilliant_pr_task_uri($basic) {
 
 function brilliant_pr_menu() {
   $items['entity/brilliant_pr_project'] = array(
-    'title' => 'Current',
+    'title' => t('Current'),
     'page callback' => 'brilliant_pr_project_info_page',
 //  access right for viewing projects
     'access arguments' => array('view brilliant_pr_projects'),
@@ -182,7 +182,7 @@ function brilliant_pr_menu() {
   );
 
   $items['admin/structure/brilliant_pr_project/manage'] = array(
-    'title' => 'Administer projects',
+    'title' => t('Administer projects'),
     'page callback' => 'brilliant_pr_project_admin_page',
 //  access rights for admin path with admin privileges
     'access arguments' => array('administer brilliant_pr_projects'),
@@ -197,7 +197,7 @@ function brilliant_pr_menu() {
 
 //  adding new tab page for completed projects
   $items['admin/structure/brilliant_pr_project/manage/complete'] = array(
-    'title' => 'Completed projects',
+    'title' => t('Completed projects'),
     'page callback' => 'brilliant_pr_project_complete_page',
     'access arguments' => array('administer brilliant_pr_projects'),
     'weight' => -5,
@@ -208,7 +208,7 @@ function brilliant_pr_menu() {
 
 //  adding new tab page for removed projects
   $items['admin/structure/brilliant_pr_project/manage/remove'] = array(
-    'title' => 'Deleted projects',
+    'title' => t('Deleted projects'),
     'page callback' => 'brilliant_pr_project_remove_page',
     'access arguments' => array('remove brilliant_pr_projects'),
     'weight' => -5,
@@ -218,7 +218,7 @@ function brilliant_pr_menu() {
   );
 //  adding new tab page for approve project
   $items['admin/structure/brilliant_pr_project/manage/approve'] = array(
-    'title' => 'Projects for approve',
+    'title' => t('Projects for approve'),
     'page callback' => 'brilliant_pr_project_approve_page',
     'access arguments' => array('administer brilliant_pr_projects'),
     'weight' => -15,
@@ -243,7 +243,7 @@ function brilliant_pr_menu() {
   );
 //  edit or delete project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/edit'] = array(
-    'title' => 'Edit',
+    'title' => t('Edit'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('brilliant_pr_project_form', 3),
     'access arguments' => array('edit brilliant_pr_projects'),
@@ -251,7 +251,7 @@ function brilliant_pr_menu() {
   );
 //  restore project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/restore'] = array(
-    'title' => 'Restore',
+    'title' => t('Restore'),
     'page callback' => 'brilliant_pr_project_restore',
     'page arguments' => array(2),
     'weight' => -5,
@@ -259,7 +259,7 @@ function brilliant_pr_menu() {
     'type' => MENU_CALLBACK,
   );
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/remove'] = array(
-    'title' => 'Remove',
+    'title' => t('Remove'),
     'page callback' => 'brilliant_pr_project_delete_once',
     'page arguments' => array(2),
     'weight' => -5,
@@ -268,7 +268,7 @@ function brilliant_pr_menu() {
   );
 //  restore all projects - access rights only for admin
   $items['entity/brilliant_pr_project/basic/restore_all'] = array(
-    'title' => 'Restore all',
+    'title' => t('Restore all'),
     'page callback' => 'brilliant_pr_project_total_restore',
     'page arguments' => array(2),
     'weight' => -5,
@@ -277,7 +277,7 @@ function brilliant_pr_menu() {
   );
   //  restore all projects - access rights only for admin
   $items['entity/brilliant_pr_project/basic/remove_all'] = array(
-    'title' => 'Restore all',
+    'title' => t('Remove all'),
     'page callback' => 'brilliant_pr_project_total_remove',
     'page arguments' => array(2),
     'weight' => -5,
@@ -286,7 +286,7 @@ function brilliant_pr_menu() {
   );
 //  delete project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/delete'] = array(
-    'title' => 'Delete',
+    'title' => t('Delete'),
     'page callback' => 'brilliant_pr_project_delete_admin',
     'page arguments' => array(2),
     'weight' => -5,
@@ -295,7 +295,7 @@ function brilliant_pr_menu() {
   );
 //  delete all projects - access rights only for admin
   $items['entity/brilliant_pr_project/basic/delete_all'] = array(
-    'title' => 'Delete all',
+    'title' => t('Delete all'),
     'page callback' => 'brilliant_pr_project_delete_all_admin',
     'page arguments' => array(2),
     'weight' => -5,
@@ -304,7 +304,7 @@ function brilliant_pr_menu() {
   );
 //  tab for referenced tasks for this project
   $items['entity/brilliant_pr_project/basic/%brilliant_pr_project/tasks'] = array(
-    'title' => 'Current tasks',
+    'title' => t('Current tasks'),
     'page callback' => 'brilliant_pr_ref_view',
     'access arguments' => array('edit brilliant_pr_projects'),
     'type' => MENU_LOCAL_TASK,
@@ -314,7 +314,7 @@ function brilliant_pr_menu() {
 
 //  add remove and restore functionality for tasks
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/restore'] = array(
-    'title' => 'Restore',
+    'title' => t('Restore'),
     'page callback' => 'brilliant_pr_task_restore',
     'page arguments' => array(2),
     'weight' => -5,
@@ -323,7 +323,7 @@ function brilliant_pr_menu() {
   );
 //  restore all tasks - access right only for admin
   $items['entity/brilliant_pr_task/basic/restore_all'] = array(
-    'title' => 'Restore all',
+    'title' => t('Restore all'),
     'page callback' => 'brilliant_pr_task_total_restore',
     'page arguments' => array(2),
     'weight' => -5,
@@ -332,7 +332,7 @@ function brilliant_pr_menu() {
   );
   //  add remove and restore functionality for tasks
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/remove'] = array(
-    'title' => 'Remove',
+    'title' => t('Remove'),
     'page callback' => 'brilliant_pr_task_remove_admin',
     'page arguments' => array(2),
     'weight' => -5,
@@ -341,7 +341,7 @@ function brilliant_pr_menu() {
   );
   //  add remove and restore functionality for tasks
   $items['entity/brilliant_pr_task/basic/remove_all'] = array(
-    'title' => 'Remove all',
+    'title' => t('Remove all'),
     'page callback' => 'brilliant_pr_task_total_remove',
     'page arguments' => array(2),
     'weight' => -5,
@@ -350,7 +350,7 @@ function brilliant_pr_menu() {
   );
 // delete task
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/delete'] = array(
-    'title' => 'Delete',
+    'title' => t('Delete'),
     'page callback' => 'brilliant_pr_task_delete_admin',
     'page arguments' => array(2),
     'weight' => -5,
@@ -359,7 +359,7 @@ function brilliant_pr_menu() {
   );
 //  delete all tasks - access rights only for admin
   $items['entity/brilliant_pr_task/basic/delete_all'] = array(
-    'title' => 'delete all',
+    'title' => t('Delete all'),
     'page callback' => 'brilliant_pr_task_delete_all_admin',
     'page arguments' => array(2),
     'weight' => -5,
@@ -368,7 +368,7 @@ function brilliant_pr_menu() {
   );
 //  add new tab page for remove tasks
   $items['admin/structure/brilliant_pr_task/manage/remove'] = array(
-    'title' => 'Deleted tasks',
+    'title' => t('Deleted tasks'),
     'page callback' => 'brilliant_pr_task_remove_page',
     'access arguments' => array('remove brilliant_pr_tasks'),
     'weight' => -5,
@@ -377,7 +377,7 @@ function brilliant_pr_menu() {
   );
 
   $items['entity/brilliant_pr_project/basic/add'] = array(
-    'title' => 'Projects',
+    'title' => t('Projects'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'page callback' => 'brilliant_pr_project_add',
     'access arguments' => array('create brilliant_pr_projects'),
@@ -388,7 +388,7 @@ function brilliant_pr_menu() {
    */
 
   $items['entity/brilliant_pr_project/complete'] = array(
-    'title' => 'Completed',
+    'title' => t('Completed'),
     'page callback' => 'brilliant_pr_project_list_complete',
     'access arguments' => array('view user completed brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_complete.inc',
@@ -396,7 +396,7 @@ function brilliant_pr_menu() {
     'weight' => 3,
   );
   $items['entity/brilliant_pr_project/approve'] = array(
-    'title' => 'For approve',
+    'title' => t('For approve'),
     'page callback' => 'brilliant_pr_project_approve_page',
     'access arguments' => array('view user approved brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_approve.inc',
@@ -404,7 +404,7 @@ function brilliant_pr_menu() {
     'weight' => 2,
   );
   $items['entity/brilliant_pr_project/remove'] = array(
-    'title' => 'Deleted',
+    'title' => t('Deleted'),
     'page callback' => 'brilliant_pr_project_remove_page',
     'access arguments' => array('view user deleted brilliant_pr_projects'),
     'file' => 'brilliant_pr_project_admin_remove.inc',
@@ -412,27 +412,27 @@ function brilliant_pr_menu() {
     'weight' => 4,
   );
   $items['entity/brilliant_pr_task'] = array(
-    'title' => 'Tasks',
+    'title' => t('Tasks'),
     'page callback' => 'brilliant_pr_task_info_page',
     'access arguments' => array('view brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_current.inc',
   );
 
   $items['admin/structure/brilliant_pr_task/manage'] = array(
-    'title' => 'Administer tasks',
+    'title' => t('Administer tasks'),
     'page callback' => 'brilliant_pr_task_admin_page',
     'access arguments' => array('administer brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_admin_current.inc',
   );
 
   $items['admin/structure/brilliant_pr_task/manage/view'] = array(
-    'title' => 'Current tasks',
+    'title' => t('Current tasks'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   );
 //  adding new tab page for complete table
   $items['entity/brilliant_pr_task/complete'] = array(
-    'title' => 'Completed Tasks',
+    'title' => t('Completed Tasks'),
     'page callback' => 'brilliant_pr_task_list_complete',
     'access arguments' => array('view user completed brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_complete.inc',
@@ -440,7 +440,7 @@ function brilliant_pr_menu() {
     'weight' => -90,
   );
   $items['entity/brilliant_pr_task/approve'] = array(
-    'title' => 'For approve',
+    'title' => t('For approve'),
     'page callback' => 'brilliant_pr_task_approve_page',
     'access arguments' => array('view user approved brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_admin_approve.inc',
@@ -448,7 +448,7 @@ function brilliant_pr_menu() {
     'weight' => 2,
   );
   $items['entity/brilliant_pr_task/remove'] = array(
-    'title' => 'Deleted',
+    'title' => t('Deleted'),
     'page callback' => 'brilliant_pr_task_remove_page',
     'access arguments' => array('view user deleted brilliant_pr_tasks'),
     'file' => 'brilliant_pr_task_admin_remove.inc',
@@ -457,7 +457,7 @@ function brilliant_pr_menu() {
   );
 //  adding new tab page for approve tasks
   $items['admin/structure/brilliant_pr_task/manage/approve'] = array(
-    'title' => 'Tasks for approve',
+    'title' => t('Tasks for approve'),
     'page callback' => 'brilliant_pr_task_approve_page',
     'access arguments' => array('administer brilliant_pr_tasks'),
     'weight' => -15,
@@ -474,13 +474,13 @@ function brilliant_pr_menu() {
   );
 
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/view'] = array(
-    'title' => 'View',
+    'title' => t('View'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   );
 //  edit task
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/edit'] = array(
-    'title' => 'Edit',
+    'title' => t('Edit'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('brilliant_pr_task_form', 3),
     'access arguments' => array('edit brilliant_pr_tasks'),
@@ -488,7 +488,7 @@ function brilliant_pr_menu() {
   );
 //  create task
   $items['entity/brilliant_pr_task/basic/add'] = array(
-    'title' => 'Tasks',
+    'title' => t('Tasks'),
     'page callback' => 'brilliant_pr_task_add',
     'access arguments' => array('create brilliant_pr_tasks'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
@@ -3041,8 +3041,6 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
     $form['pass']['#title'] = _bootstrap_icon('lock') . ' ' . t('Password');
     $form['actions']['submit']['#attributes']['class'][] = 'login-front';
   }
-
-//  project form
   if ($form_id == 'brilliant_pr_project_form') {
     $form['submit']["#attributes"]['class'][] = 'btn-success';
     $form['title']['#title_display'] = 'invisible';

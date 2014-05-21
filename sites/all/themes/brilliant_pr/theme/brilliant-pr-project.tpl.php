@@ -83,6 +83,7 @@ $content['customer_name']['#title'] = t('Contact person');
 $content['curator']['#title'] = t('Curator');
 $content['opt_time']['#title'] = t('Optimal date');
 $content['dead_time']['#title'] = t('Deadline date');
+$content['description']['#title'] = t('Description');
 //get customer profile
 $customer_username = get_user_customer($content['customer_name']['#markup']);
 $customer_fields = user_load_by_name($customer_username);
