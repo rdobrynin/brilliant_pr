@@ -3037,8 +3037,8 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
   $form['pass']['#attributes']['placeholder'] = t( 'Password' );
   }
   if($form_id == 'user_login_block') {
-    $form['name']['#title'] = _bootstrap_icon('user') . ' ' . 'Username';
-    $form['pass']['#title'] = _bootstrap_icon('lock') . ' ' . 'Password';
+    $form['name']['#title'] = _bootstrap_icon('user') . ' ' . t('Username');
+    $form['pass']['#title'] = _bootstrap_icon('lock') . ' ' . t('Password');
     $form['actions']['submit']['#attributes']['class'][] = 'login-front';
   }
 
@@ -3090,8 +3090,14 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
     $form['account']['mail']['#title_display'] = 'invisible';
   }
   if($form_id == 'user_register_form') {
-//    dsm($form);
+    $form['field_first_name']['#attributes']['placeholder'] = t( 'First name' );
+    $form['field_last_name']['#attributes']['placeholder'] = t( 'Last name' );
+    $form['field_phone']['#attributes']['placeholder'] = t( 'Phone number' );
   }
+  if($form_id == 'user_pass') {
+    $form['name']['#attributes']['placeholder'] = t( 'Username or email address' );
+  }
+
 }
 
 function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {

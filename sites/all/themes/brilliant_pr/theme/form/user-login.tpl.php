@@ -8,10 +8,10 @@ $form['actions']['submit']['#id'] = 'login_btn';
 ?>
     <div class="row">
       <div class="col-lg-3">
-        <?php print render($form['name']); ?>
+        <span class="grey"><?php print render($form['name']); ?></span>
       </div>
       <div class="col-lg-3">
-        <?php print render($form['pass']); ?>
+        <span class="grey"><?php print render($form['pass']); ?></span>
       </div>
       <div class="col-lg-3">
         <?php print drupal_render_children($form); ?>
