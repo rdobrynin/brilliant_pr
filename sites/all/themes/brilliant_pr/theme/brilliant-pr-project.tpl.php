@@ -90,7 +90,6 @@ $customer_fields = user_load_by_name($customer_username);
 // get curator profile
 $curator_username = get_user_curator($content['curator']['#markup']);
 $curator_fields = user_load_by_name($curator_username);
-
 ?>
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">

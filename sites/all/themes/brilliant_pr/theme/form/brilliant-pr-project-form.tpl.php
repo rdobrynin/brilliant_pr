@@ -20,6 +20,16 @@ hide($form['remove']);
         <div class="col-lg-4 pull-left">
           <?php print render($form['title']); ?>
         </div>
+
+<!--add last edit time and author-->
+        <?php if(arg(4) == 'edit'):?>
+        <div class="col-lg-4 pull-left">
+          <span class="info_edit_project"><?php print t('Information edited by'). ' ';?> 31.12.2014 16;26 by Jevgeni S</div>
+      </div>
+        <?php endif; ?>
+
+
+
       </div>
       <div class="row">
         <div class="col-lg-2">
@@ -36,6 +46,8 @@ hide($form['remove']);
         </div>
         <div class="col-lg-4 pull-left">
           <?php print render($form['company']); ?>
+          <div class="help"><?php print t('Start typing the company name, if it is in our data base, the window assign you. To create a new client,
+enter the company name. Once all the fields are filled in, save the project. The client will be added to our database.');?></div>
         </div>
       </div>
 
