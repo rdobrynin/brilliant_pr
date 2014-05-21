@@ -55,7 +55,7 @@ function brilliant_pr_menu_link(array $variables) {
   }
   if($element["#theme"] == 'menu_link__user_menu'){
     if($element["#href"] == 'user'){
-      $element['#title'] = '<span>'._bootstrap_icon('user').'</span>'.' '.get_name($user->uid);
+      $element['#title'] = '<span>'._bootstrap_icon('user').'</span>'.' '.'<span class="link">'.get_name($user->uid).'</span>';
     }
     if($element["#href"] == 'user/logout'){
       $element['#title'] = '<span>'._bootstrap_icon('log-out').'</span>'.' '.$element['#title'];

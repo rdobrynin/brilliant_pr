@@ -9,7 +9,6 @@
 
 $form['actions']['submit']["#attributes"]['class'][] = 'btn-success btn-max';
 hide($form['actions']['submit']);
-dsm($form);
 ?>
      <div class="row p-top">
        <div class="col-lg-6">
