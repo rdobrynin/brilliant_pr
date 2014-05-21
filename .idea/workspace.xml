@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.autocomplete.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +32,7 @@
           <file leaf-file-name="brilliant_pr.module" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="191" column="14" selection-start="4982" selection-end="4982" vertical-scroll-proportion="0.25058004" vertical-offset="3186" max-vertical-offset="58696">
+                <state line="1355" column="55" selection-start="45242" selection-end="45242" vertical-scroll-proportion="0.4512761" vertical-offset="24163" max-vertical-offset="58732">
                   <folding />
                 </state>
               </provider>
@@ -110,10 +112,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="brilliant_pr.module" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="brilliant_pr.module" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="200" column="42" selection-start="5312" selection-end="5312" vertical-scroll-proportion="0.5914567" vertical-offset="3024" max-vertical-offset="58765">
+                <state line="196" column="37" selection-start="5172" selection-end="5172" vertical-scroll-proportion="-17.333334" vertical-offset="3024" max-vertical-offset="58315">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="brilliant_pr.autocomplete.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.autocomplete.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="48" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.61276597" vertical-offset="0" max-vertical-offset="1642">
                   <folding />
                 </state>
               </provider>
@@ -179,6 +190,7 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/variables.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-register-form.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.autocomplete.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
       </list>
     </option>
@@ -644,10 +656,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="2497" height="1445" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -688,11 +700,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/user-profile.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1116" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-profile-form.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="40" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="720" />
@@ -994,9 +1001,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="48" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.61276597" vertical-offset="0" max-vertical-offset="1642">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="14" selection-start="4982" selection-end="4982" vertical-scroll-proportion="0.25058004" vertical-offset="3186" max-vertical-offset="58696">
+        <state line="1355" column="55" selection-start="45242" selection-end="45242" vertical-scroll-proportion="0.4512761" vertical-offset="24163" max-vertical-offset="58732">
           <folding />
         </state>
       </provider>
