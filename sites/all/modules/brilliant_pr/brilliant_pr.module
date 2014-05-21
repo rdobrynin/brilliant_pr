@@ -189,6 +189,15 @@ function brilliant_pr_menu() {
     'file' => 'brilliant_pr_project_admin_current.inc',
   );
 
+//  companies autocomplete
+
+  $items['companies/autocomplete'] = array(
+    'title' => 'Autocomplete for companies',
+    'page callback' => '_companies_autocomplete',
+    'access arguments' => array('view brilliant_pr_projects'),  //or whatever permission makes sense
+    'type' => MENU_CALLBACK
+  );
+
   $items['admin/structure/brilliant_pr_project/manage/view'] = array(
     'title' => 'Current projects',
     'type' => MENU_DEFAULT_LOCAL_TASK,
@@ -1339,12 +1348,12 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
     }
     $form['company'] = array(
       '#title' => t('Company title'),
-      '#type' => 'select',
-      '#options' => $company,
-      '#description' => t('Company title'),
+      '#type' => 'textfield',
+      '#maxlength' => 128,
       '#default_value' => isset($entity->company) ? $entity->company : '',
       '#required' => TRUE,
       '#weight' => -80,
+      '#autocomplete_path' => 'companies/autocomplete',
     );
 //    Fetch list of customers
     $customer_name = user_role_load_by_name('customer');
@@ -1599,6 +1608,26 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
   }
   return $form;
 }
+
+
+//Autocomplete for companies
+
+function _companies_autocomplete($string) {
+  $matches = array();
+  $result = db_select('taxonomy_term_data', 'c')
+    ->fields('c', array('name'))
+    ->condition('name', '%' . db_like($string) . '%', 'LIKE')
+    ->execute();
+  // save the query to matches
+  foreach ($result as $row) {
+    $matches[$row->name] = check_plain($row->name);
+  }
+  // Return the result to the form in json
+  drupal_json_output($matches);
+}
+
+
+
 
 /**
  * Status function for project
