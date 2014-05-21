@@ -474,7 +474,7 @@ function brilliant_pr_menu() {
   );
 
   $items['entity/brilliant_pr_task/basic/%brilliant_pr_task/view'] = array(
-    'title' => t('View'),
+    'title callback' => 'brilliant_pr_task_name',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   );
@@ -882,12 +882,17 @@ function brilliant_pr_project_title($entity) {
  */
 
 function brilliant_pr_project_name() {
-//  $title = '<span class="badge">'.$counter.'</span>';
-  $title = check_plain(menu_get_active_title());
+  $title = t('Project').' '.check_plain(menu_get_active_title());
   return $title;
 }
 
-
+/**
+ * @return string
+ */
+function brilliant_pr_task_name() {
+  $title = t('Task').' '.check_plain(menu_get_active_title());
+  return $title;
+}
 
 /**
  * Callback for a task title when this entity is displayed.
