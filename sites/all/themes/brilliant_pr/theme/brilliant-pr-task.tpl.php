@@ -75,72 +75,90 @@
 ?>
 <?php
 $content = $element->content;
+$content['implementor']['#title'] = t('Implementor');
+$content['curator']['#title'] = t('Curator');
+$content['opt_time']['#title'] = t('Optimal date');
+$content['dead_time']['#title'] = t('Deadline date');
+$content['description']['#title'] = t('Description');
+//get customer profile
+$implementor_username = get_user_implementor($content['implementor']['#markup']);
+$implementor_fields = user_load_by_name($implementor_username);
+// get curator profile
+$curator_username = get_user_curator($content['curator']['#markup']);
+$curator_fields = user_load_by_name($curator_username);
 ?>
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['description']['#title']); ?></span>
+      <span class="title_view"> <?php print render($content['description']['#title']); ?></span>
     </div>
     <div class="col-lg-10">
       <?php  print render($content['description']['#markup']); ?>
     </div>
   </div>
-  <div class="row p-top user_edit_profile">
-    <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['curator']['#title']); ?></span>
+  <div class="user_edit_profile">
+
+    <!--customer-->
+    <div class="row p-top">
+      <div class="col-lg-2">
+        <span class="title_view"><?php  print render($content['implementor']['#title']); ?></span>
+      </div>
+      <div class="col-lg-2">
+        <span class="grey">  <?php  print _bootstrap_icon('user'); ?></span>&nbsp;&nbsp;<?php  print render($content['implementor']['#markup']); ?>
+      </div>
+      <div class="col-lg-3">
+        <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $implementor_fields->init; ?>
+      </div>
+      <div class="col-lg-2">
+        <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $implementor_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+      </div>
+      <div class="col-lg-1 text-left">
+        <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
+      </div>
     </div>
-    <div class="col-lg-6">
-      <?php  print render($content['curator']['#markup']); ?>
+    <!--  curator-->
+    <div class="row p-top">
+      <div class="col-lg-2">
+        <span class="title_view"> <?php  print render($content['curator']['#title']); ?></span>
+      </div>
+      <div class="col-lg-2">
+        <span class="grey"><?php  print _bootstrap_icon('user'); ?></span>&nbsp;&nbsp;<?php  print render($content['curator']['#markup']); ?>
+      </div>
+      <div class="col-lg-3">
+        <span class="grey">  <?php  print _bootstrap_icon('envelope'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->init; ?>
+      </div>
+      <div class="col-lg-2">
+        <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $curator_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
+      </div>
+      <div class="col-lg-1 text-left">
+        <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
+      </div>
     </div>
   </div>
-  <div class="row p-top user_edit_profile">
+  <div class="row">
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['company']['#title']); ?></span>
-    </div>
-    <div class="col-lg-6">
-      <?php  print render($content['company']['#markup']); ?>
-    </div>
-  </div>
-  <div class="row p-top user_edit_profile">
-    <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['customer_name']['#title']); ?></span>
-    </div>
-    <div class="col-lg-6">
-      <?php  print render($content['customer_name']['#markup']); ?>
-    </div>
-  </div>
-  <div class="row p-top user_edit_profile">
-    <div class="col-lg-3">
       <span class="title_view"> <?php  print render($content['opt_time']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <br>
       <?php  print render($content['opt_time']['#markup']); ?>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['dead_time']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <br>
       <?php  print render($content['dead_time']['#markup']); ?>
     </div>
-  </div>
-  <div class="row p-top user_edit_profile">
+
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['status']['#title']); ?></span>
-    </div>
-    <div class="col-lg-6">
+      <span class="title_view"> <?php  print render($content['status']['#title']); ?><span class="badge status-badge">!</span></span>
+      <br>
       <?php  print render($content['status']['#markup']); ?>
     </div>
-  </div>
-  <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
       <span class="title_view"> <?php  print render($content['created']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <br>
       <?php  print render($content['created']['#markup']); ?>
     </div>
     <div class="col-lg-2">
-      <span class="title_view"> <?php  print render($content['changed']['#title']); ?></span>
-    </div>
-    <div class="col-lg-3">
+      <span class="title_view"> <?php  print render($content['changed']['#title']); ?></span
+      <br>
       <?php  print render($content['changed']['#markup']); ?>
     </div>
   </div>
