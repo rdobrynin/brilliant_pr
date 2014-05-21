@@ -31,6 +31,16 @@ hide($form['actions']['cancel']);
           <?php print render($form['field_phone'][LANGUAGE_NONE][0]['value']); ?>
         </div>
       </div>
+
+      <div class="row user_edit_profile">
+        <div class="col-lg-2">
+          <span class="field-title"><?php print render($form['field_company']['und']['#title']); ?></span>
+        </div>
+        <div class="col-lg-4 pull-left">
+          <?php print render($form['field_company']); ?>
+        </div>
+      </div>
+
       <div class="row user_edit_profile">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['account']['name']['#title']); ?></span>

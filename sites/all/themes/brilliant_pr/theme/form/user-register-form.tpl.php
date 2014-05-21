@@ -9,6 +9,7 @@
 
 $form['actions']['submit']["#attributes"]['class'][] = 'btn-success btn-max';
 hide($form['actions']['submit']);
+dsm($form);
 ?>
      <div class="row p-top">
        <div class="col-lg-6">
@@ -20,17 +21,26 @@ hide($form['actions']['submit']);
      </div>
      <div class="row p-top">
        <div class="col-lg-6">
-         <?php print render($form['field_phone'][LANGUAGE_NONE][0]['value']); ?>
+         <?php print render($form['field_company']); ?>
        </div>
        <div class="col-lg-6">
-         <?php print render($form['account']['name']); ?>
+         <?php print render($form['field_phone'][LANGUAGE_NONE][0]['value']); ?>
        </div>
      </div>
+
+
+
     <div class="row p-top">
       <div class="col-lg-6">
-        <?php print render($form['account']['mail']); ?>
+        <?php print render($form['account']['name']); ?>
       </div>
     </div>
+
+<div class="row p-top">
+  <div class="col-lg-6">
+    <?php print render($form['account']['mail']); ?>
+  </div>
+</div>
 
      <div class="row p-top">
        <div class="col-lg-6">

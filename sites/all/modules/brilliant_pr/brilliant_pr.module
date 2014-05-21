@@ -3110,6 +3110,7 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
     $form['account']['name']['#title_display'] = 'invisible';
     $form['account']['current_pass']['#title_display'] = 'invisible';
     $form['account']['mail']['#title_display'] = 'invisible';
+    $form['field_company']['und']['#title_display'] = 'invisible';
   }
   if($form_id == 'user_register_form') {
     $form['field_first_name']['#attributes']['placeholder'] = t( 'First name' );

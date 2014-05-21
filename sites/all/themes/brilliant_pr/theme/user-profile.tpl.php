@@ -39,8 +39,12 @@
     <div class="col-lg-8">
       <div class="brilliant_pr_profile_line"><span><?php print t('Name');?></span> <?php print (!empty($user_profile["field_first_name"]['#object']->field_first_name[LANGUAGE_NONE][0]['value'])? $user_profile["field_first_name"]['#object']->field_first_name[LANGUAGE_NONE][0]['value']:'').' '.(!empty($user_profile["field_last_name"]['#object']->field_last_name[LANGUAGE_NONE][0]['value']) ? $user_profile["field_last_name"]['#object']->field_last_name[LANGUAGE_NONE][0]['value'] : '');?>
       </div>
-      <div class="brilliant_pr_profile_line"><span><?php print t('Phone number');?></span> <?php print (!empty($user_profile["field_first_name"]['#object']->field_phone[LANGUAGE_NONE][0]['value'])? $user_profile["field_first_name"]['#object']->field_phone[LANGUAGE_NONE][0]['value']:'');?>
+      <div class="brilliant_pr_profile_line"><span class="title_view"><?php print t('Phone number');?></span> <?php print (!empty($user_profile["field_first_name"]['#object']->field_phone[LANGUAGE_NONE][0]['value'])? $user_profile["field_first_name"]['#object']->field_phone[LANGUAGE_NONE][0]['value']:'');?>
       </div>
+
+      <div class="brilliant_pr_profile_line"><span><?php print t('Company');?></span> <?php print (!empty($user_profile['field_company'][0]['#title'])? $user_profile['field_company'][0]['#title']:'');?>
+      </div>
+
       <div class="brilliant_pr_profile_line"><span><?php print t('Email');?></span> <?php print (!empty($user_profile["field_last_name"]['#object']->mail)? $user_profile["field_last_name"]['#object']->mail:'');?>
       </div>
       <div class="brilliant_pr_profile_line"><span><?php print t('User name');?></span> <?php print (!empty($user_profile["field_last_name"]['#object']->name)? $user_profile["field_first_name"]['#object']->name:'');?>
