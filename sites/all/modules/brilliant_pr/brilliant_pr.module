@@ -503,6 +503,30 @@ function brilliant_pr_menu() {
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -100,
   );
+  $items['admin/people/list/curator'] = array(
+    'title' => t('Add curator'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('user_register_form', 3),
+    'access arguments' => array('administer users'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 1,
+  );
+  $items['admin/people/list/client'] = array(
+    'title' => t('Add client'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('user_register_form', 3),
+    'access arguments' => array('administer users'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 1,
+  );
+  $items['admin/people/list/implementor'] = array(
+    'title' => t('Add implementor'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('user_register_form', 3),
+    'access arguments' => array('administer users'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 1,
+  );
   return $items;
 }
 
