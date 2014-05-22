@@ -503,6 +503,8 @@ function brilliant_pr_menu() {
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -100,
   );
+
+//  add new user create tabs
   $items['admin/people/list/curator'] = array(
     'title' => t('Add curator'),
     'page callback' => 'drupal_get_form',

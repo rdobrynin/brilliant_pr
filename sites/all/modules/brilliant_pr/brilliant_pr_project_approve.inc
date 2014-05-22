@@ -57,7 +57,7 @@ function brilliant_pr_project_approve_page() {
     if ($user->uid && $account = user_load($entity->uid)) {
       $customer_name = user_load_by_name($entity->customer_name);
       $curator = user_load_by_name($entity->curator);
-      $user_name = $account->name;
+      $user_name = $account->uid;
       $user_mail = $account->mail;
       if (in_array('administrator', $user->roles)) {
         $rows[] = array(
@@ -83,8 +83,8 @@ function brilliant_pr_project_approve_page() {
             format_date($entity->created),
             date('Y-m-d', $entity->opt_time),
             date('Y-m-d', $entity->dead_time),
-            l($entity->customer_name, 'user/' . $customer_name->uid),
-            l($user_name, 'user/' . $entity->uid),
+            l((get_name($customer_name->uid)), 'user/' . $customer_name->uid),
+            l(get_name($user_name), 'user/' . $entity->uid),
             l($user_mail, 'mailto:' . $user_mail),
           )
         );
