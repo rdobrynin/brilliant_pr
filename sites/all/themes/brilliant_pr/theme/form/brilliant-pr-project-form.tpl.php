@@ -10,6 +10,18 @@ hide($form['cancel']);
 hide($form['remove']);
 ?>
 
+
+<?php
+global $user;
+// get changed time
+if (is_numeric(arg(3))) {
+  $entity_id = arg(3);
+  $project = brilliant_pr_project_load($pid = $entity_id);
+  $changed_time = format_date($project->changed);
+  $curator = user_load_by_name($project->curator);
+}
+?>
+
 <div class="row-fluid">
   <div class="span8">
     <fieldset>
@@ -20,16 +32,14 @@ hide($form['remove']);
         <div class="col-lg-4 pull-left">
           <?php print render($form['title']); ?>
         </div>
-
-<!--add last edit time and author-->
+<!--add last edit time and editor-->
         <?php if(arg(4) == 'edit'):?>
         <div class="col-lg-4 pull-left">
-          <span class="info_edit_project"><?php print t('Information edited by'). ' ';?> 31.12.2014 16;26 by Jevgeni S</div>
+          <span class="info_edit_project"><?php print t('Last edition'). ' ';?>
+          <i style="font-weight:bold;">  <?php print($changed_time)?></i>&nbsp;by
+          <?php  print l(get_name($curator->uid), 'user/' . $curator->uid); ?></div>
       </div>
         <?php endif; ?>
-
-
-
       </div>
       <div class="row">
         <div class="col-lg-2">
