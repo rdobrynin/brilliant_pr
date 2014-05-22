@@ -104,7 +104,8 @@ global $user;
       <div class="division">
         <div class="row">
           <div class="col-lg-12 text-right">
-            <span class="field-title"><?php print render($form['submit']); ?><?php print render($form['remove']); ?>
+            <span class="field-title"><?php print render($form['submit']); ?>
+              <a data-toggle="modal" href="#remove-task-btn"><?php print render($form['remove']); ?></a>
 <?php print render($form['cancel']); ?></span>
 
           </div>
@@ -115,4 +116,24 @@ global $user;
     </fieldset>
   </div>
 </div>
+
+
+<!-- Modal remove task -->
+<div class="modal fade" id="remove-task-btn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><?php print t('Remove');?>&nbsp;<?php print render($form['title']['#value']); ?></h4>
+      </div>
+      <div class="modal-body">
+        <?php print t('Are you sure remove this task ?');?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php print t('Cancel');?></button>
+        <?php print render($form['remove']); ?>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 

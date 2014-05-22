@@ -1976,17 +1976,16 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#submit' => array('brilliant_pr_task_remove'),
         '#limit_validation_errors' => array(),
         '#weight' => 200,
-        '#attributes' => array('onclick' => 'if(!confirm("Are you shure delete task?")){return false;}'),
       );
     }
-    $form['cancel'] = array(
-      '#type' => 'submit',
-      '#value' => t('cancel'),
-      '#executes_submit_callback' => TRUE,
-      '#submit' => array('brilliant_pr_task_form_cancel'),
-      '#limit_validation_errors' => array(),
-      '#weight' => 250,
-    );
+//    $form['cancel'] = array(
+//      '#type' => 'submit',
+//      '#value' => t('cancel'),
+//      '#executes_submit_callback' => TRUE,
+//      '#submit' => array('brilliant_pr_task_form_cancel'),
+//      '#limit_validation_errors' => array(),
+//      '#weight' => 250,
+//    );
   }
   else {
     drupal_goto($path = 'entity/brilliant_pr_task/');

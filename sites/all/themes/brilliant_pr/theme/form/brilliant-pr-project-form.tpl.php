@@ -123,7 +123,7 @@ enter the company name. Once all the fields are filled in, save the project. The
        <?php print t('Are you sure delete this project ?');?>
       </div>
       <div class="modal-footer">
-        <?php print render($form['cancel']); ?>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php print t('Cancel');?></button>
         <?php print render($form['delete']); ?>
       </div>
     </div><!-- /.modal-content -->
@@ -141,7 +141,7 @@ enter the company name. Once all the fields are filled in, save the project. The
         <?php print t('Are you sure remove this project ?');?>
       </div>
       <div class="modal-footer">
-        <?php print render($form['cancel']); ?>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php print t('Cancel');?></button>
         <?php print render($form['remove']); ?>
       </div>
     </div><!-- /.modal-content -->
