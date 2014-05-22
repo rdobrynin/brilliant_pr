@@ -7,6 +7,15 @@ hide($form['submit']);
 hide($form['remove']);
 hide($form['cancel']);
 global $user;
+
+if (is_numeric(arg(3))) {
+  $entity_id = arg(3);
+  $task = brilliant_pr_task_load($tid = $entity_id);
+  $changed_time = format_date($task->changed);
+  $editor = user_load_by_name($task->editor);
+}
+
+
 ?>
 
 <div class="row-fluid">
@@ -19,6 +28,18 @@ global $user;
         <div class="col-lg-4 pull-left">
           <?php print render($form['title']); ?>
         </div>
+
+        <!--add last edit time and editor-->
+        <?php if(arg(4) == 'edit'):?>
+        <div class="col-lg-6 pull-left">
+          <span class="info_edit_project"><?php print t('Last edition'). ' ';?>
+            <i style="font-weight:bold;">  <?php print($changed_time)?></i>&nbsp;by
+          <?php  print l(get_name($editor->uid), 'user/' . $editor->uid); ?></div>
+      </div>
+      <?php endif; ?>
+
+
+
       </div>
 <!--      check if we create task for this project, we hide project ref item-->
       <?php if (arg(3) == 'add' && is_null(arg(4)) ||$user->uid != in_array('customer', $user->roles) && arg(3) == 'add' && is_null(arg(4)) ): ?>
@@ -59,6 +80,9 @@ global $user;
         </div>
       </div>
       <?php endif; ?>
+
+
+
       <div class="row">
       <div class="col-lg-2">
           <span class="field-title">
@@ -69,6 +93,9 @@ global $user;
         <?php print render($form['implementor']); ?>
       </div>
   </div>
+
+
+
       <div class="row">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['description']['#title']); ?></span>
