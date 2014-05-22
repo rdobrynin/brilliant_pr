@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +39,7 @@
           <file leaf-file-name="region--navigation.tpl.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="123" column="0" selection-start="6260" selection-end="6260" vertical-scroll-proportion="0.934085" vertical-offset="795" max-vertical-offset="3007">
+                <state line="132" column="0" selection-start="6311" selection-end="6311" vertical-scroll-proportion="0.6686904" vertical-offset="1263" max-vertical-offset="3169">
                   <folding />
                 </state>
               </provider>
@@ -905,7 +904,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="0" selection-start="6260" selection-end="6260" vertical-scroll-proportion="0.934085" vertical-offset="795" max-vertical-offset="3007">
+        <state line="132" column="0" selection-start="6311" selection-end="6311" vertical-scroll-proportion="0.6686904" vertical-offset="1263" max-vertical-offset="3169">
           <folding />
         </state>
       </provider>

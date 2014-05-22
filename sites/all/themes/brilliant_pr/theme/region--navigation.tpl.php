@@ -54,7 +54,8 @@ global $base_url;
         <?php print render($page['primary_nav']); ?>
         <?php print render($page['secondary_nav']); ?>
         <!--        add select list-->
-        <div class="time-top"><?php print format_date( time());?></div>
+<!--        --><?php //print format_date( time());?>
+        <div class="time-top"></div>
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
@@ -117,7 +118,15 @@ global $base_url;
       month[10] = "November";
       month[11] = "December";
       var time = d.getDate() +  " " + month[d.getMonth()] + " " + weekday[d.getDay()] + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-      alert(time);
-    });
+
+
+
+      jQuery(time).appendTo('.time-top');
+
+
+
+
+
+      });
   })(jQuery);
 </script>
