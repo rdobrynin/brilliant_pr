@@ -1,6 +1,6 @@
 
 <?php
-
+global $user;
 $form['opt_time']['date']['#title'] = 'Optimal date/time';
 $form['dead_time']['date']['#title'] = 'Deadline date/time';
 hide($form['submit']);
@@ -8,17 +8,13 @@ hide($form['submit_task']);
 hide($form['delete']);
 hide($form['cancel']);
 hide($form['remove']);
-?>
-
-
-<?php
-global $user;
 // get changed time
 if (is_numeric(arg(3))) {
   $entity_id = arg(3);
   $project = brilliant_pr_project_load($pid = $entity_id);
   $changed_time = format_date($project->changed);
   $curator = user_load_by_name($project->curator);
+  $editor = user_load_by_name($form['editor']['#default_value']);
 }
 ?>
 
@@ -34,10 +30,10 @@ if (is_numeric(arg(3))) {
         </div>
 <!--add last edit time and editor-->
         <?php if(arg(4) == 'edit'):?>
-        <div class="col-lg-4 pull-left">
+        <div class="col-lg-6 pull-left">
           <span class="info_edit_project"><?php print t('Last edition'). ' ';?>
           <i style="font-weight:bold;">  <?php print($changed_time)?></i>&nbsp;by
-          <?php  print l(get_name($curator->uid), 'user/' . $curator->uid); ?></div>
+          <?php  print l(get_name($editor->uid), 'user/' . $editor->uid); ?></div>
       </div>
         <?php endif; ?>
       </div>

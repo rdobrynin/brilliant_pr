@@ -1422,6 +1422,15 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
       '#required' => TRUE,
       '#weight' => -70,
     );
+    $form['editor'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Editor'),
+      '#options' => $user->name,
+      '#description' => t('Curator of project'),
+      '#default_value' => $user->name,
+      '#required' => TRUE,
+      '#weight' => -70,
+    );
     $form['opt_time'] = array(
       '#type' => 'date_popup',
       '#title' => t('Optimal datetime'),
@@ -2124,6 +2133,7 @@ function brilliant_pr_project_form_submit($form, &$form_state) {
   // Does this next line return an object - from a form?? Apparently...
   $entity = $form_state['values']['brilliant_pr_project_entity'];
   $entity->title = $form_state['values']['title'];
+  $entity->editor = $form_state['values']['editor'];
   $entity->description = $form_state['values']['description'];
   $field_key_cur = $form_state['values']['curator'];
   $result_curator = $form['curator']['#options'][$field_key_cur];
@@ -2800,6 +2810,7 @@ class EntityBrilliantProjectBasicController
     $entity->pid = 0;
     $entity->bundle_type = 'brilliant_pr_project_bundle';
     $entity->title = '';
+    $entity->editor = '';
     $entity->description = '';
     $entity->opt_time = REQUEST_TIME;
     $entity->dead_time = REQUEST_TIME;
@@ -3140,6 +3151,9 @@ function brilliant_pr_form_alter(&$form, &$form_state, $form_id) {
     $form['dead_time']['#title'] = t('Deadline date/time');
     $form['dead_time']['#size'] = 25;
     $form['opt_time']['#size'] = 25;
+    $form['editor']['#title_display'] = 'invisible';
+    $form['editor']['#prefix'] = '<div style="display:none;">';
+    $form['editor']['#suffix'] = '</div>';
   }
   if ($form_id == 'brilliant_pr_task_form') {
     $form['submit']["#attributes"]['class'][] = 'btn-success';

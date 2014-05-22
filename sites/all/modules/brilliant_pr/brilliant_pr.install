@@ -80,6 +80,13 @@ function brilliant_pr_schema() {
         'not null' => TRUE,
         'default' => '',
       ),
+      'editor' => array(
+        'description' => 'Editor of project',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+      ),
       'company' => array(
         'description' => 'company title',
         'type' => 'varchar',
@@ -176,6 +183,13 @@ function brilliant_pr_schema() {
       ),
       'curator' => array(
         'description' => 'Curator of task',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'editor' => array(
+        'description' => 'Editor of task',
         'type' => 'varchar',
         'length' => 100,
         'not null' => TRUE,
