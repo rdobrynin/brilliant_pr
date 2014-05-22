@@ -74,6 +74,7 @@
  */
 ?>
 <?php
+global $user;
 $content = $element->content;
 $content['implementor']['#title'] = t('Implementor');
 $content['curator']['#title'] = t('Curator');
@@ -83,8 +84,11 @@ $content['dead_time']['#title'] = t('Deadline date');
 $content['description']['#title'] = t('Description');
 $content['ref']['#title'] = t('Project ref');
 //get implementor profile
-$implementor_username = get_user_implementor($content['implementor']['#markup']);
-$implementor_fields = user_load_by_name($implementor_username);
+
+if(!in_array('customer', $user->roles)) {
+  $implementor_username = get_user_implementor($content['implementor']['#markup']);
+  $implementor_fields = user_load_by_name($implementor_username);
+}
 //get customer profile
 $customer_username = get_user_customer($content['customer_name']['#markup']);
 $customer_fields = user_load_by_name($customer_username);
@@ -136,6 +140,8 @@ $curator_fields = user_load_by_name($curator_username);
         <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
       </div>
     </div>
+
+    <?php if(!in_array('customer', $user->roles)):?>
     <!--implementor-->
     <div class="row p-top">
       <div class="col-lg-2">
@@ -154,6 +160,9 @@ $curator_fields = user_load_by_name($curator_username);
         <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
       </div>
     </div>
+
+    <?php endif?>
+
     <!--  curator-->
     <div class="row p-top">
       <div class="col-lg-2">
