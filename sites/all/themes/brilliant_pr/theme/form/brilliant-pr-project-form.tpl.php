@@ -103,12 +103,47 @@ enter the company name. Once all the fields are filled in, save the project. The
         <div class="row">
           <div class="col-lg-12 text-right">
             <span class="field-title"><?php print render($form['submit']); ?><?php print render($form['submit_task']); ?>
-              <?php print render($form['remove']); ?>
-              <?php print render($form['delete']); ?><?php print render($form['cancel']); ?></span>
+              <a data-toggle="modal" href="#remove-project-btn"><?php print render($form['remove']); ?>
+              <a data-toggle="modal" href="#delete-project-btn"><?php print render($form['delete']); ?></a><?php print render($form['cancel']); ?></span>
           </div>
         </div>
       </div>
     </fieldset>
   </div>
 </div>
-
+<!-- Modal delete project -->
+<div class="modal fade" id="delete-project-btn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><?php print t('Delete');?>&nbsp;<?php print render($form['title']['#value']); ?></h4>
+      </div>
+      <div class="modal-body">
+       <?php print t('Are you sure delete this project ?');?>
+      </div>
+      <div class="modal-footer">
+        <?php print render($form['cancel']); ?>
+        <?php print render($form['delete']); ?>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal delete project -->
+<div class="modal fade" id="remove-project-btn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><?php print t('Remove');?>&nbsp;<?php print render($form['title']['#value']); ?></h4>
+      </div>
+      <div class="modal-body">
+        <?php print t('Are you sure remove this project ?');?>
+      </div>
+      <div class="modal-footer">
+        <?php print render($form['cancel']); ?>
+        <?php print render($form['remove']); ?>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
