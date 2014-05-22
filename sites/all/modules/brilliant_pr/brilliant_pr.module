@@ -3057,11 +3057,11 @@ function brilliant_pr_theme() {
     'variables' => array('element' => NULL),
     'template' => 'brilliant_pr_project',
   );
-  $items['brilliant_pr_task'] = array(
-    'path' => drupal_get_path('theme', 'brilliant_pr') . '/theme/views',
-    'variables' => array('element' => NULL),
-    'template' => 'brilliant_pr_task',
-  );
+//  $items['brilliant_pr_task'] = array(
+//    'path' => drupal_get_path('theme', 'brilliant_pr') . '/theme/views',
+//    'variables' => array('element' => NULL),
+//    'template' => 'brilliant_pr_task',
+//  );
 
   return $items;
 }
