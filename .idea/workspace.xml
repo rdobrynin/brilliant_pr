@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/brilliant-pr-project-form.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/brilliant-pr-project-form.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.install" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.install" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +30,7 @@
           <file leaf-file-name="brilliant-pr-project-form.tpl.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/brilliant-pr-project-form.tpl.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="28" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.5151778" vertical-offset="0" max-vertical-offset="4213">
+                <state line="16" column="46" selection-start="536" selection-end="536" vertical-scroll-proportion="0.24978317" vertical-offset="0" max-vertical-offset="4213">
                   <folding>
                     <element signature="n#style#0;n#i#0;n#span#0;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -837,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/brilliant-pr-project-form.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.5151778" vertical-offset="0" max-vertical-offset="4213">
+        <state line="16" column="46" selection-start="536" selection-end="536" vertical-scroll-proportion="0.24978317" vertical-offset="0" max-vertical-offset="4213">
           <folding>
             <element signature="n#style#0;n#i#0;n#span#0;n#div#2;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />

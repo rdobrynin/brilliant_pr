@@ -14,7 +14,7 @@ if (is_numeric(arg(3))) {
   $project = brilliant_pr_project_load($pid = $entity_id);
   $changed_time = format_date($project->changed);
   $curator = user_load_by_name($project->curator);
-  $editor = user_load_by_name($form['editor']['#default_value']);
+  $editor = user_load_by_name($project->editor);
 }
 ?>
 
