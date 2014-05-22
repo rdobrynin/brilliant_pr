@@ -1591,6 +1591,7 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
         '#value' => t('Delete'),
         '#submit' => array('brilliant_pr_project_edit_delete'),
         '#weight' => 200,
+        '#attributes' => array('onclick' => 'if(!confirm("Really Delete?")){return false;}'),
       );
       }
     }
@@ -1616,6 +1617,7 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
             '#value' => t('Remove'),
             '#submit' => array('brilliant_pr_project_remove'),
             '#weight' => 200,
+            '#attributes' => array('onclick' => 'if(!confirm("Really Delete?")){return false;}'),
           );
         }
       } #end if
@@ -1975,6 +1977,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#submit' => array('brilliant_pr_task_remove'),
         '#limit_validation_errors' => array(),
         '#weight' => 200,
+        '#attributes' => array('onclick' => 'if(!confirm("Really Delete?")){return false;}'),
       );
     }
     $form['cancel'] = array(
