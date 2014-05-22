@@ -54,6 +54,7 @@ global $base_url;
         <?php print render($page['primary_nav']); ?>
         <?php print render($page['secondary_nav']); ?>
         <!--        add select list-->
+        <div class="time-top"><?php print format_date( time());?></div>
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
@@ -88,3 +89,35 @@ global $base_url;
     <?php if ($content_attributes): ?></div><?php endif; ?>
   </header>
 <?php endif; ?>
+
+
+<script>
+  (function($){
+    $(document).ready(function(){
+      var d = new Date();
+      var weekday = new Array(7);
+      weekday[0]=  "Sunday";
+      weekday[1] = "Monday";
+      weekday[2] = "Tuesday";
+      weekday[3] = "Wednesday";
+      weekday[4] = "Thursday";
+      weekday[5] = "Friday";
+      weekday[6] = "Saturday";
+      var month = new Array();
+      month[0] = "January";
+      month[1] = "February";
+      month[2] = "March";
+      month[3] = "April";
+      month[4] = "May";
+      month[5] = "June";
+      month[6] = "July";
+      month[7] = "August";
+      month[8] = "September";
+      month[9] = "October";
+      month[10] = "November";
+      month[11] = "December";
+      var time = d.getDate() +  " " + month[d.getMonth()] + " " + weekday[d.getDay()] + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      alert(time);
+    });
+  })(jQuery);
+</script>
