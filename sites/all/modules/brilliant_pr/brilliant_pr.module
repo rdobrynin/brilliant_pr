@@ -1715,7 +1715,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
   //  if need to make permission for manager or admin route (for example) we add condition for this role
 //  if task status  == complete - customer can't edit form
 
-  if ($user->uid == $entity->uid && $entity->status != 1 OR  $user->name == $entity->implementor && $entity->status != 0 || in_array('administrator', $user->roles) || $user->name == $entity->curator || $user->name == $project->curator) {
+  if ($user->uid == $entity->uid && $entity->status != 1 OR  $user->name == $entity->implementor && $entity->status != 0 || in_array('administrator', $user->roles) || $user->name == $entity->curator || $user->name == $project->curator || $user->name == $project->customer_name) {
     $form['title'] = array(
       '#type' => 'textfield',
       '#title' => t('Task name'),
