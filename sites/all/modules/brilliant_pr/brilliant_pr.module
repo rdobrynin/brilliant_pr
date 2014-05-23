@@ -2537,6 +2537,7 @@ function brilliant_pr_task_edit_delete($form, &$form_state) {
   $form_state['redirect'] = 'entity/brilliant_pr_task/basic';
 }
 
+
 /**
  * We save the project entity by calling the controller.
  * @param $entity
