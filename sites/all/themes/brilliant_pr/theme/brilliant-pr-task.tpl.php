@@ -163,6 +163,7 @@ $curator_fields = user_load_by_name($curator_username);
 
     <?php endif?>
 
+
     <!--  curator-->
     <div class="row p-top">
       <div class="col-lg-2">
