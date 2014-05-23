@@ -55,7 +55,7 @@ global $base_url;
         <?php print render($page['secondary_nav']); ?>
         <!--        add select list-->
 <!--        --><?php //print format_date( time());?>
-        <div class="time-top"></div>
+        <span class="time-top"></span> <span class="time-top-clock"></span>
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
@@ -122,10 +122,10 @@ global $base_url;
         month[9] = "October";
         month[10] = "November";
         month[11] = "December";
-        var time = d.getDate() +  " " + month[d.getMonth()] + " " + weekday[d.getDay()] + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        var time_date = d.getDate() +  " " + month[d.getMonth()] + " " + weekday[d.getDay()] + " ";
+        var time_time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 
 // counter
-
         var total_seconds = (new Date - start) / 1000;
         var hours = Math.floor(total_seconds / 3600);
         total_seconds = total_seconds % 3600;
@@ -135,14 +135,12 @@ global $base_url;
         hours = pretty_time_string(hours);
         minutes = pretty_time_string(minutes);
         seconds = pretty_time_string(seconds);
-
         var currentTimeString = hours + ":" + minutes + ":" + seconds;
 //        end counter
 
-        $('.time-top').text(time);
-      }, 1000);
-
-
+        $('.time-top').text(time_date);
+        $('.time-top-clock').text(time_time);
+      }, 100);
       });
   })(jQuery);
 </script>
