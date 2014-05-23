@@ -1,4 +1,5 @@
 <?php
+global $user;
 $form['opt_time']['date']['#title'] = 'Optimal date/time';
 $form['dead_time']['date']['#title'] = 'Deadline date/time';
 unset($form['dead_time']['time']['date']);
@@ -6,6 +7,9 @@ unset($form['opt_time']['time']['date']);
 hide($form['submit']);
 hide($form['remove']);
 hide($form['cancel']);
+if ($user->uid == in_array('customer', $user->roles)) {
+  unset($form['implementor']);
+}
 global $user;
 
 if (is_numeric(arg(3))) {
@@ -79,7 +83,7 @@ if (is_numeric(arg(3))) {
           <?php print render($form['curator']); ?>
         </div>
       </div>
-      <?php endif; ?>
+
 
 
 
@@ -94,7 +98,7 @@ if (is_numeric(arg(3))) {
       </div>
   </div>
 
-
+      <?php endif; ?>
 
       <div class="row">
         <div class="col-lg-2">

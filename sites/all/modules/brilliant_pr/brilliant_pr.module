@@ -1885,7 +1885,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#title' => t('Implementor'),
         '#description' => t('Implementor of task'),
         '#default_value' => isset($entity->implementor) ? $entity->implementor : '',
-        '#required' => TRUE,
+        '#required' => FALSE,
         '#weight' => -70,
       );
 
@@ -2492,10 +2492,10 @@ function brilliant_pr_task_form_submit($form, &$form_state) {
     $project = brilliant_pr_project_load($pid = $entity->ref);
     $username_curator = $project->curator;
     $entity->curator = $username_curator;
-    $field_key_imp = $form_state['values']['implementor'];
-    $result_implementor = $form['implementor']['#options'][$field_key_imp];
-    $username_implementor = get_user_implementor($result_implementor);
-    $entity->implementor = $username_implementor;
+//    $field_key_imp = $form_state['values']['implementor'];
+//    $result_implementor = $form['implementor']['#options'][$field_key_imp];
+//    $username_implementor = get_user_implementor($result_implementor);
+//    $entity->implementor = $username_implementor;
   }
   $entity->opt_time = $form_state['values']['opt_time'];
   $entity->dead_time = $form_state['values']['dead_time'];
@@ -2585,29 +2585,35 @@ function brilliant_pr_task_delete($entity) {
 
 function get_name($uid) {
 //get first_name
-  $first_name = db_select('field_data_field_first_name', 'n')
-    ->condition('entity_id', $uid, '=')
-    ->fields('n', array(
-      'field_first_name_value',
-    ));
-  $results_first = $first_name
-    ->execute();
-  foreach ($results_first as $first) {
-  }
-  //get last_name
-  $last_name = db_select('field_data_field_last_name', 'n')
-    ->condition('entity_id', $uid, '=')
-    ->fields('n', array(
-      'field_last_name_value',
-    ));
-  $results_last = $last_name
-    ->execute();
-  foreach ($results_last as $last) {
-  }
+  if(isset($uid)) {
+    $first_name = db_select('field_data_field_first_name', 'n')
+      ->condition('entity_id', $uid, '=')
+      ->fields('n', array(
+        'field_first_name_value',
+      ));
+    $results_first = $first_name
+      ->execute();
+    foreach ($results_first as $first) {
+    }
+    //get last_name
+    $last_name = db_select('field_data_field_last_name', 'n')
+      ->condition('entity_id', $uid, '=')
+      ->fields('n', array(
+        'field_last_name_value',
+      ));
+    $results_last = $last_name
+      ->execute();
+    foreach ($results_last as $last) {
+    }
 // make concatenation First_name + Last_name
-  $first_result = $first->field_first_name_value;
-  $last_result = $last->field_last_name_value;
-  $full_name = $first_result . ' ' . $last_result;
+    $first_result = $first->field_first_name_value;
+    $last_result = $last->field_last_name_value;
+    $full_name = $first_result . ' ' . $last_result;
+  }
+  else {
+    $full_name = '';
+  }
+
   return $full_name;
 }
 
@@ -2618,51 +2624,58 @@ function get_name($uid) {
  */
 
 function get_user_curator($user) {
-  $arr = explode(' ', trim($user));
-  $first = $arr[0];
-  $last = $arr[1];
+  if($user != '') {
+    $arr = explode(' ', trim($user));
+    $first = $arr[0];
+    $last = $arr[1];
 //get first_name uid
-  $curator_name = user_role_load_by_name('curator');
-  $result = db_select('users_roles', 'ur')
-    ->fields('ur', array('uid'))
-    ->condition('rid', $curator_name->rid)
-    ->execute();
-  $curator_names = array();
-  foreach ($result as $one_user) {
-    $user_record = $one_user->uid;
-    $curator_names[] = $user_record;
-  }
-  $or = db_or();
-  foreach ($curator_names as $nrn) {
-    $or->condition('n.entity_id', $nrn);
-  }
-  $first_name = db_select('field_data_field_first_name', 'n')
-    ->condition('field_first_name_value', $first, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_first = $first_name
-    ->execute();
-  foreach ($results_first as $first) {
-//    print_r($first);
-  }
-  //get last_name uid
-  $last_name = db_select('field_data_field_last_name', 'n')
-    ->condition('field_last_name_value', $last, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_last = $last_name
-    ->execute();
-  foreach ($results_last as $last) {
-    if ($first->entity_id == $last->entity_id) {
-      $user_id = $first->entity_id;
+    $curator_name = user_role_load_by_name('curator');
+    $result = db_select('users_roles', 'ur')
+      ->fields('ur', array('uid'))
+      ->condition('rid', $curator_name->rid)
+      ->execute();
+    $curator_names = array();
+    foreach ($result as $one_user) {
+      $user_record = $one_user->uid;
+      $curator_names[] = $user_record;
     }
+    $or = db_or();
+    foreach ($curator_names as $nrn) {
+      $or->condition('n.entity_id', $nrn);
+    }
+    $first_name = db_select('field_data_field_first_name', 'n')
+      ->condition('field_first_name_value', $first, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_first = $first_name
+      ->execute();
+    foreach ($results_first as $first) {
+//    print_r($first);
+    }
+    //get last_name uid
+    $last_name = db_select('field_data_field_last_name', 'n')
+      ->condition('field_last_name_value', $last, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_last = $last_name
+      ->execute();
+    foreach ($results_last as $last) {
+      if ($first->entity_id == $last->entity_id) {
+        $user_id = $first->entity_id;
+      }
+    }
+    $u = user_load($user_id);
+    $user = $u->name;
   }
-  $u = user_load($user_id);
-  $user = $u->name;
+  else {
+    $user = '';
+  }
+
+
   return $user;
 }
 
@@ -2673,51 +2686,57 @@ function get_user_curator($user) {
  */
 
 function get_user_customer($user) {
-  $arr = explode(' ', trim($user));
-  $first = $arr[0];
-  $last = $arr[1];
+
+  if($user != '') {
+    $arr = explode(' ', trim($user));
+    $first = $arr[0];
+    $last = $arr[1];
 //get first_name uid
-  $customer_name = user_role_load_by_name('customer');
-  $result = db_select('users_roles', 'ur')
-    ->fields('ur', array('uid'))
-    ->condition('rid', $customer_name->rid)
-    ->execute();
-  $customer_names = array();
-  foreach ($result as $one_user) {
-    $user_record = $one_user->uid;
-    $customer_names[] = $user_record;
-  }
-  $or = db_or();
-  foreach ($customer_names as $nrn) {
-    $or->condition('n.entity_id', $nrn);
-  }
-  $first_name = db_select('field_data_field_first_name', 'n')
-    ->condition('field_first_name_value', $first, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_first = $first_name
-    ->execute();
-  foreach ($results_first as $first) {
-//    print_r($first);
-  }
-  //get last_name uid
-  $last_name = db_select('field_data_field_last_name', 'n')
-    ->condition('field_last_name_value', $last, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_last = $last_name
-    ->execute();
-  foreach ($results_last as $last) {
-    if ($first->entity_id == $last->entity_id) {
-      $user_id = $first->entity_id;
+    $customer_name = user_role_load_by_name('customer');
+    $result = db_select('users_roles', 'ur')
+      ->fields('ur', array('uid'))
+      ->condition('rid', $customer_name->rid)
+      ->execute();
+    $customer_names = array();
+    foreach ($result as $one_user) {
+      $user_record = $one_user->uid;
+      $customer_names[] = $user_record;
     }
+    $or = db_or();
+    foreach ($customer_names as $nrn) {
+      $or->condition('n.entity_id', $nrn);
+    }
+    $first_name = db_select('field_data_field_first_name', 'n')
+      ->condition('field_first_name_value', $first, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_first = $first_name
+      ->execute();
+    foreach ($results_first as $first) {
+//    print_r($first);
+    }
+    //get last_name uid
+    $last_name = db_select('field_data_field_last_name', 'n')
+      ->condition('field_last_name_value', $last, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_last = $last_name
+      ->execute();
+    foreach ($results_last as $last) {
+      if ($first->entity_id == $last->entity_id) {
+        $user_id = $first->entity_id;
+      }
+    }
+    $u = user_load($user_id);
+    $user = $u->name;
   }
-  $u = user_load($user_id);
-  $user = $u->name;
+  else {
+    $user = '';
+  }
   return $user;
 }
 
@@ -2729,51 +2748,57 @@ function get_user_customer($user) {
  */
 
 function get_user_implementor($user) {
-  $arr = explode(' ', trim($user));
-  $first = $arr[0];
-  $last = $arr[1];
+  if($user != '') {
+    $arr = explode(' ', trim($user));
+    $first = $arr[0];
+    $last = $arr[1];
 //get first_name uid
-  $implementor_name = user_role_load_by_name('implementor');
-  $result = db_select('users_roles', 'ur')
-    ->fields('ur', array('uid'))
-    ->condition('rid', $implementor_name->rid)
-    ->execute();
-  $implementor_names = array();
-  foreach ($result as $one_user) {
-    $user_record = $one_user->uid;
-    $implementor_names[] = $user_record;
-  }
-  $or = db_or();
-  foreach ($implementor_names as $nrn) {
-    $or->condition('n.entity_id', $nrn);
-  }
-  $first_name = db_select('field_data_field_first_name', 'n')
-    ->condition('field_first_name_value', $first, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_first = $first_name
-    ->execute();
-  foreach ($results_first as $first) {
-//    print_r($first);
-  }
-  //get last_name uid
-  $last_name = db_select('field_data_field_last_name', 'n')
-    ->condition('field_last_name_value', $last, '=')
-    ->condition($or)
-    ->fields('n', array(
-      'entity_id',
-    ));
-  $results_last = $last_name
-    ->execute();
-  foreach ($results_last as $last) {
-    if ($first->entity_id == $last->entity_id) {
-      $user_id = $first->entity_id;
+    $implementor_name = user_role_load_by_name('implementor');
+    $result = db_select('users_roles', 'ur')
+      ->fields('ur', array('uid'))
+      ->condition('rid', $implementor_name->rid)
+      ->execute();
+    $implementor_names = array();
+    foreach ($result as $one_user) {
+      $user_record = $one_user->uid;
+      $implementor_names[] = $user_record;
     }
+    $or = db_or();
+    foreach ($implementor_names as $nrn) {
+      $or->condition('n.entity_id', $nrn);
+    }
+    $first_name = db_select('field_data_field_first_name', 'n')
+      ->condition('field_first_name_value', $first, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_first = $first_name
+      ->execute();
+    foreach ($results_first as $first) {
+//    print_r($first);
+    }
+    //get last_name uid
+    $last_name = db_select('field_data_field_last_name', 'n')
+      ->condition('field_last_name_value', $last, '=')
+      ->condition($or)
+      ->fields('n', array(
+        'entity_id',
+      ));
+    $results_last = $last_name
+      ->execute();
+    foreach ($results_last as $last) {
+      if ($first->entity_id == $last->entity_id) {
+        $user_id = $first->entity_id;
+      }
+    }
+    $u = user_load($user_id);
+    $user = $u->name;
   }
-  $u = user_load($user_id);
-  $user = $u->name;
+  else {
+    $user = '';
+  }
+
   return $user;
 }
 
