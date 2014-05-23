@@ -157,7 +157,7 @@ $curator_fields = user_load_by_name($curator_username);
         <span class="grey">  <?php  print _bootstrap_icon('phone'); ?></span>&nbsp;&nbsp;<?php  print $implementor_fields->field_phone[LANGUAGE_NONE][0]['value']; ?>
       </div>
       <div class="col-lg-1 text-left">
-        <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('volume-up'); ?>  <span>&nbsp;</span> <?php print t('Wake up call')?></button>
+        <button class="btn btn-info wake-up"> <?php  print _bootstrap_icon('bullhorn'); ?>  <span>&nbsp;</span> <?php print t('Call for report')?></button>
       </div>
     </div>
 
