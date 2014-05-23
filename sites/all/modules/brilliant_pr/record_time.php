@@ -1,0 +1,1 @@
+<?php print format_date( time());?>
