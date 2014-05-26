@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="" />
+    <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +37,7 @@
       <file leaf-file-name="region--navigation.tpl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.5038674" vertical-offset="28" max-vertical-offset="3655">
+            <state line="56" column="52" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.60821307" vertical-offset="28" max-vertical-offset="3151">
               <folding />
             </state>
           </provider>
@@ -886,7 +888,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.5038674" vertical-offset="28" max-vertical-offset="3655">
+        <state line="56" column="52" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.60821307" vertical-offset="28" max-vertical-offset="3151">
           <folding />
         </state>
       </provider>
