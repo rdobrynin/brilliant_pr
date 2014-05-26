@@ -55,7 +55,7 @@ global $base_url;
         <?php print render($page['secondary_nav']); ?>
         <!--        add select list-->
 <!--        --><?php //print format_date( time());?>
-        <span class="time-top"></span> <span class="time-top-clock"></span>
+        <span class="time-top"></span>
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
@@ -138,8 +138,8 @@ global $base_url;
         var currentTimeString = hours + ":" + minutes + ":" + seconds;
 //        end counter
 
-        $('.time-top').text(time_date);
-        $('.time-top-clock').text(time_time);
+        $('.time-top').text(time_date + time_time);
+
       }, 100);
       });
   })(jQuery);
