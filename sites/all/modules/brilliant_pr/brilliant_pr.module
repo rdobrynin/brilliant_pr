@@ -3242,7 +3242,7 @@ function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {
     $tasks = brilliant_pr_task_load_multiple();
     $counter = 0;
     foreach ($tasks as $task) {
-      if ($arg == $task->ref) {
+      if ($arg == $task->ref && $task->status !=5) {
         $counter++;
       }
     }
