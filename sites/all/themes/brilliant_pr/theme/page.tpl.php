@@ -75,6 +75,7 @@
 ?>
 <div class="sidebar_left">
   <div class="flow-btn" id="flow-btn"><i class="glyphicon glyphicon-cog" id="cog"></i></div>
+  <div class="slide-box-close" ><i class="glyphicon glyphicon-pencil"></i></div>
   <?php /* region--sidebar_left.tpl.php */ ?>
   <?php if ($page['sidebar_left']): ?>
     <div id="sidebar_left">
