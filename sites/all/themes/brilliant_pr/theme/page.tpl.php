@@ -74,9 +74,10 @@
  */
 ?>
 <div class="sidebar_left">
+  <div class="flow-btn" id="flow-btn"><i class="glyphicon glyphicon-cog" id="cog"></i></div>
   <?php /* region--sidebar_left.tpl.php */ ?>
   <?php if ($page['sidebar_left']): ?>
-    <div id="sidebar_left" class="my_class">
+    <div id="sidebar_left">
       <?php print render($page['sidebar_left']); ?>
     </div> <!-- /sidebar_left -->
   <?php endif; ?>

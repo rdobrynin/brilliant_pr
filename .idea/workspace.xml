@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +38,7 @@
       <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="19" selection-start="3337" selection-end="3357" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1509">
+            <state line="76" column="80" selection-start="3398" selection-end="3398" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1526">
               <folding />
             </state>
           </provider>
@@ -66,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="region--sidebar_left.tpl.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="region--sidebar_left.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="0.15434083" vertical-offset="0" max-vertical-offset="1059">
+            <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1058">
               <folding />
             </state>
           </provider>
@@ -111,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar_left.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sidebar_left.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="127" selection-end="127" vertical-scroll-proportion="-2.4230769" vertical-offset="0" max-vertical-offset="1016">
+            <state line="25" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.49614114" vertical-offset="0" max-vertical-offset="1339">
               <folding />
             </state>
           </provider>
@@ -181,9 +177,9 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php" />
       </list>
     </option>
   </component>
@@ -587,31 +583,35 @@
       <created>1400833922067</created>
       <updated>1400833922067</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added sidebar_left">
+      <created>1401442676012</created>
+      <updated>1401442676012</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="2497" height="1445" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25377643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25396827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13627091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1750306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1750306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16389728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -631,7 +631,8 @@
     </option>
     <MESSAGE value="fixed task tpl view" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="added sidebar_left" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sidebar_left" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -890,20 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="127" selection-end="127" vertical-scroll-proportion="-2.4230769" vertical-offset="0" max-vertical-offset="1016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="19" selection-start="3337" selection-end="3357" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1509">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="0" selection-start="4233" selection-end="4233" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="1437">
@@ -920,7 +907,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="0.15434083" vertical-offset="0" max-vertical-offset="1059">
+        <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1058">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="80" selection-start="3398" selection-end="3398" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="1526">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.49614114" vertical-offset="0" max-vertical-offset="1339">
           <folding />
         </state>
       </provider>
