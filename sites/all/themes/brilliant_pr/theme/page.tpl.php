@@ -73,6 +73,14 @@
  * @ingroup themeable
  */
 ?>
+<div class="sidebar_left">
+  <?php /* region--sidebar_left.tpl.php */ ?>
+  <?php if ($page['sidebar_left']): ?>
+    <div id="sidebar_left" class="my_class">
+      <?php print render($page['sidebar_left']); ?>
+    </div> <!-- /sidebar_left -->
+  <?php endif; ?>
+</div>
 <?php /* region--navigation.tpl.php */ ?>
 <?php if ($page['navigation']): ?>
   <?php print render($page['navigation']); ?>
