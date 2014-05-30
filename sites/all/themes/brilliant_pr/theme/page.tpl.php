@@ -73,16 +73,7 @@
  * @ingroup themeable
  */
 ?>
-<div class="sidebar_left">
-  <div class="flow-btn" id="flow-btn"><i class="glyphicon glyphicon-chevron-right" id="flow-right"></i></div>
-  <div class="slide-box-close" style="display: none;" ><i class="glyphicon glyphicon-chevron-left" id="flow-left"></i></div>
-  <?php /* region--sidebar_left.tpl.php */ ?>
-  <?php if ($page['sidebar_left']): ?>
-    <div id="sidebar_left">
-      <?php print render($page['sidebar_left']); ?>
-    </div> <!-- /sidebar_left -->
-  <?php endif; ?>
-</div>
+
 <?php /* region--navigation.tpl.php */ ?>
 <?php if ($page['navigation']): ?>
   <?php print render($page['navigation']); ?>

@@ -3273,5 +3273,3 @@ function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {
 //    '#active' => ($router_item['path'] == $root_path),
 //  );
 }
-
-drupal_add_js('sites/all/themes/brilliant_pr/js/script.js');

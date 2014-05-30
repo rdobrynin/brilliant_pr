@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" afterPath="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
@@ -28,13 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="page.tpl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="41" selection-start="3818" selection-end="3818" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="1544">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="98" column="0" selection-start="4072" selection-end="4072" vertical-scroll-proportion="0.50214595" vertical-offset="0" max-vertical-offset="1382">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,19 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="region--sidebar_left.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1058">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="brilliant_pr.info" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="2" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2165">
+            <state line="48" column="39" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="2147">
               <folding />
             </state>
           </provider>
@@ -81,20 +74,11 @@
       <file leaf-file-name="brilliant_pr.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3270" column="8" selection-start="105898" selection-end="105898" vertical-scroll-proportion="-24.074074" vertical-offset="58174" max-vertical-offset="59882">
+            <state line="3256" column="0" selection-start="105448" selection-end="105448" vertical-scroll-proportion="-15.407408" vertical-offset="58156" max-vertical-offset="59864">
               <folding>
-                <marker date="1401444645276" expanded="false" signature="102717:102730" placeholder="..." />
-                <marker date="1401444645276" expanded="false" signature="103513:103526" placeholder="..." />
+                <marker date="1401450618648" expanded="false" signature="102717:102730" placeholder="..." />
+                <marker date="1401450618648" expanded="false" signature="103513:103526" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="25" selection-start="368" selection-end="368" vertical-scroll-proportion="0.3096976" vertical-offset="0" max-vertical-offset="1472">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -102,42 +86,16 @@
       <file leaf-file-name="brilliant-pr-project.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/brilliant-pr-project.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="55" selection-start="3985" selection-end="3985" vertical-scroll-proportion="3.3333333" vertical-offset="432" max-vertical-offset="2786">
-              <folding>
-                <marker date="1400833762702" expanded="true" signature="4031:4280" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4058:4166" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4194:4271" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4312:6523" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4338:4648" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4365:4470" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4497:4639" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4692:5589" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4719:4829" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="4856:5013" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5040:5181" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5208:5380" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5417:5580" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5632:6516" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5659:5764" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5791:5942" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="5969:6109" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6136:6307" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6344:6507" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6543:7621" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6570:6749" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6776:6958" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="6986:7203" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="7230:7408" placeholder="..." />
-                <marker date="1400833762702" expanded="true" signature="7435:7612" placeholder="..." />
-              </folding>
+            <state line="91" column="55" selection-start="3985" selection-end="3985" vertical-scroll-proportion="-0.6666667" vertical-offset="324" max-vertical-offset="2786">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar_left.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="-16.615385" vertical-offset="0" max-vertical-offset="1753">
+            <state line="10" column="20" selection-start="234" selection-end="234" vertical-scroll-proportion="-0.34615386" vertical-offset="162" max-vertical-offset="1069">
               <folding />
             </state>
           </provider>
@@ -199,14 +157,14 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/form.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/menu_nav.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--navigation.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less" />
       </list>
     </option>
   </component>
@@ -413,7 +371,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="27" selection-start="262" selection-end="262" vertical-scroll-proportion="-3.8076923" vertical-offset="0" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="0" selection-start="4233" selection-end="4233" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="1437">
@@ -821,49 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/brilliant-pr-project.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="55" selection-start="3985" selection-end="3985" vertical-scroll-proportion="3.3333333" vertical-offset="432" max-vertical-offset="2786">
-          <folding>
-            <marker date="1400833762702" expanded="true" signature="4031:4280" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4058:4166" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4194:4271" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4312:6523" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4338:4648" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4365:4470" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4497:4639" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4692:5589" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4719:4829" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="4856:5013" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5040:5181" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5208:5380" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5417:5580" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5632:6516" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5659:5764" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5791:5942" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="5969:6109" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6136:6307" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6344:6507" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6543:7621" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6570:6749" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6776:6958" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="6986:7203" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="7230:7408" placeholder="..." />
-            <marker date="1400833762702" expanded="true" signature="7435:7612" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3270" column="8" selection-start="105898" selection-end="105898" vertical-scroll-proportion="-24.074074" vertical-offset="58174" max-vertical-offset="59882">
-          <folding>
-            <marker date="1401444645276" expanded="false" signature="102717:102730" placeholder="..." />
-            <marker date="1401444645276" expanded="false" signature="103513:103526" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--footer.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1190" selection-end="1190" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="1095">
@@ -871,13 +779,6 @@
             <marker date="1400672820593" expanded="true" signature="950:1172" placeholder="..." />
             <marker date="1400672820593" expanded="true" signature="1021:1145" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/region--sidebar_left.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1058">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,32 +796,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3256" column="0" selection-start="105448" selection-end="105448" vertical-scroll-proportion="-15.407408" vertical-offset="58156" max-vertical-offset="59864">
+          <folding>
+            <marker date="1401450618648" expanded="false" signature="102717:102730" placeholder="..." />
+            <marker date="1401450618648" expanded="false" signature="103513:103526" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="2" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2165">
+        <state line="48" column="39" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="2147">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/brilliant-pr-project.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="55" selection-start="3985" selection-end="3985" vertical-scroll-proportion="-0.6666667" vertical-offset="324" max-vertical-offset="2786">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="234" selection-end="234" vertical-scroll-proportion="-0.34615386" vertical-offset="162" max-vertical-offset="1069">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="41" selection-start="3818" selection-end="3818" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="1544">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="-16.615385" vertical-offset="0" max-vertical-offset="1753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="368" selection-end="368" vertical-scroll-proportion="0.3096976" vertical-offset="0" max-vertical-offset="1472">
+        <state line="98" column="0" selection-start="4072" selection-end="4072" vertical-scroll-proportion="0.50214595" vertical-offset="0" max-vertical-offset="1382">
           <folding />
         </state>
       </provider>

@@ -18,7 +18,6 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
-regions[sidebar_left]   = 'Sidebar left'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
