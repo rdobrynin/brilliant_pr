@@ -74,8 +74,8 @@
  */
 ?>
 <div class="sidebar_left">
-  <div class="flow-btn" id="flow-btn"><i class="glyphicon glyphicon-cog" id="cog"></i></div>
-  <div class="slide-box-close" ><i class="glyphicon glyphicon-pencil"></i></div>
+  <div class="flow-btn" id="flow-btn"><i class="glyphicon glyphicon-chevron-right" id="flow-right"></i></div>
+  <div class="slide-box-close" style="display: none;" ><i class="glyphicon glyphicon-chevron-left" id="flow-left"></i></div>
   <?php /* region--sidebar_left.tpl.php */ ?>
   <?php if ($page['sidebar_left']): ?>
     <div id="sidebar_left">
