@@ -51,7 +51,6 @@ stylesheets[all][] = css/style.css
 ; scripts[] = 'bootstrap/js/scrollspy.js'
 ; scripts[] = 'bootstrap/js/tab.js'
 ; scripts[] = 'bootstrap/js/transition.js'
-; scripts[] = 'script.js'
 
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.

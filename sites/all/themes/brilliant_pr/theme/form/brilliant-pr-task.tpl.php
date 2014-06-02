@@ -83,10 +83,6 @@ if (is_numeric(arg(3))) {
           <?php print render($form['curator']); ?>
         </div>
       </div>
-
-
-
-
       <div class="row">
       <div class="col-lg-2">
           <span class="field-title">
@@ -167,4 +163,18 @@ if (is_numeric(arg(3))) {
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+<div id="myModal" class="modal hide fade" tabindex="-1" data-backdrop="false" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>My modal content here…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Close</button>
+  </div>
+</div>
 

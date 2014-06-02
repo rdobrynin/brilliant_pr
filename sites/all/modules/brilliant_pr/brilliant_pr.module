@@ -1642,7 +1642,6 @@ function brilliant_pr_project_form($form, &$form_state, $entity) {
     drupal_goto($path = 'entity/brilliant_pr_project/basic/');
   }
   drupal_add_js(drupal_get_path('module', 'brilliant_pr') . '/brilliant_pr.autocomplete.js', array('weight' => 20));
-  drupal_add_js(drupal_get_path('module', 'brilliant_pr') . '/script.js', array('weight' => 20));
   return $form;
 }
 
@@ -3273,3 +3272,4 @@ function brilliant_pr_menu_local_tasks_alter(&$data, $router_item, $root_path) {
 //    '#active' => ($router_item['path'] == $root_path),
 //  );
 }
+

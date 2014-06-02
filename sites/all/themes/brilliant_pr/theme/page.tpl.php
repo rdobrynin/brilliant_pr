@@ -72,6 +72,7 @@
  *
  * @ingroup themeable
  */
+drupal_add_js('sites/all/themes/brilliant_pr/js/script.js');
 ?>
 
 <?php /* region--navigation.tpl.php */ ?>

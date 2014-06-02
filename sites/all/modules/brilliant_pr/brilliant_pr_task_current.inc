@@ -114,6 +114,9 @@ function brilliant_pr_task_info_page() {
       $implementor = user_load_by_name($entity->implementor);
       $curator = user_load_by_name($entity->curator);
       $project_entity = brilliant_pr_project_load($pid = $entity->ref);
+
+      if($project_entity != null) {
+
       if ($user->name == $entity->curator) {
         $rows[] = array(
           'data' => array(
@@ -179,8 +182,14 @@ function brilliant_pr_task_info_page() {
         );
         #end row[]
       }
+
+      }
     }
   } #end foreach
+
+
+if (isset($project_entity)) {
+
   if ($user->name == $project_entity->customer_name || $user->name == $entity->implementor || in_array('administrator', $user->roles) ||
     $user->name == $project_entity->curator) {
     $content = '';
@@ -203,9 +212,14 @@ function brilliant_pr_task_info_page() {
     );
   }
   else {
-    $content = '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any current 11tasks.') .'</div>';
     $html = $content;
 
+  }
+}
+  else {
+    $content = '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>';
+    $html = $content;
   }
   return ($html);
 }

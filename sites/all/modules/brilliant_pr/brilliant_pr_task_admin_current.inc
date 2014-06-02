@@ -7,10 +7,7 @@
 function brilliant_pr_task_admin_page() {
   global $user;
   $content = array();
-  $content[] = array(
-    '#type' => 'item',
-    '#markup' => l(t('Add an task entity'), 'entity/brilliant_pr_task/basic/add'),
-  );
+
   // task_list_entities() defined below returns a 'theme array' with #theme => 'table'
   $content['table'] = brilliant_pr_task_list_admin_entities();
   return $content;
