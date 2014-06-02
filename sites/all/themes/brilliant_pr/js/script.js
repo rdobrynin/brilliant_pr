@@ -30,7 +30,6 @@
                 month[11] = "December";
                 var time_date = d.getDate() +  " " + month[d.getMonth()] + " " + weekday[d.getDay()] + " ";
                 var time_time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-
 // counter
                 var total_seconds = (new Date - start) / 1000;
                 var hours = Math.floor(total_seconds / 3600);
@@ -43,7 +42,6 @@
                 seconds = pretty_time_string(seconds);
                 var currentTimeString = hours + ":" + minutes + ":" + seconds;
 //        end counter
-
                 $('.time-top').text(time_date + time_time);
 
             }, 100);
