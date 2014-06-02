@@ -90,12 +90,3 @@ global $base_url;
     <?php if ($content_attributes): ?></div><?php endif; ?>
   </header>
 <?php endif; ?>
-
-
-<script>
-  (function($){
-    $(document).ready(function(){
-
-      });
-  })(jQuery);
-</script>
