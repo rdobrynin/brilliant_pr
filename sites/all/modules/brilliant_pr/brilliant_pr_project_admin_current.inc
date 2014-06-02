@@ -72,7 +72,7 @@ function brilliant_pr_project_admin_page() {
       $counter = 0; // make counter in cycle (to know how many tasks per project)
       $tasks = brilliant_pr_task_load_multiple();
       foreach ($tasks as $task) {
-        if ($entity->pid == $task->ref) {
+        if ($entity->pid == $task->ref && $task->status !=5) {
           $counter++;
         }
       }
