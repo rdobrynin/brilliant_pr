@@ -31,5 +31,8 @@
     <?php if ($content_attributes): ?><div<?php print $content_attributes; ?>><?php endif; ?>
     <?php print $content; ?>
     <?php if ($content_attributes): ?></div><?php endif; ?>
+    <p id="back-top">
+      <a href="#top"><span></span><?php print t('To top');?><span></span></a>
+    </p>
   </footer>
 <?php endif; ?>
