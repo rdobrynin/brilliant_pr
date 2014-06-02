@@ -212,13 +212,13 @@ if (isset($project_entity)) {
     );
   }
   else {
-    $content = '<div class="alert alert-info a-message">'.t('Not found any current 11tasks.') .'</div>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any current task.') .'</div>';
     $html = $content;
 
   }
 }
   else {
-    $content = '<div class="alert alert-info a-message">'.t('Not found any current tasks.') .'</div>';
+    $content = '<div class="alert alert-info a-message">'.t('Not found any current task.') .'</div>';
     $html = $content;
   }
   return ($html);

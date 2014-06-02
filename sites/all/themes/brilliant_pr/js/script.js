@@ -53,7 +53,6 @@
                 $('#myModal').modal('show');
 
             });
-            $('#myModal1').modal('show');
         }
     };
 
