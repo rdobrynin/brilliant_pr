@@ -36,7 +36,7 @@ if (is_numeric(arg(3))) {
           <?php  print l(get_name($editor->uid), 'user/' . $editor->uid); ?></div>
       </div>
         <?php endif; ?>
-      </div>git status
+      </div>
       <div class="row">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['description']['#title']); ?>&nbsp;<span class="required-note">*</span></span>

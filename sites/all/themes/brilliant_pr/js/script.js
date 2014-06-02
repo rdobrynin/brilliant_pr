@@ -55,6 +55,11 @@
             });
         }
     };
+    Drupal.behaviors.modal1 = {
+        attach : function(context, settings) {
+            $('#modal_notask').modal();
+        }
+    };
 
     Drupal.behaviors.modal = {
         attach : function(context, settings) {

@@ -1,5 +1,6 @@
 <?php
 global $user;
+global $base_url;
 $form['opt_time']['date']['#title'] = 'Optimal date/time';
 $form['dead_time']['date']['#title'] = 'Deadline date/time';
 unset($form['dead_time']['time']['date']);
@@ -7,6 +8,8 @@ unset($form['opt_time']['time']['date']);
 hide($form['submit']);
 hide($form['remove']);
 hide($form['cancel']);
+hide($form['add_project']);
+hide($form['back']);
 if ($user->uid == in_array('customer', $user->roles)) {
   unset($form['implementor']);
 }
@@ -41,12 +44,35 @@ if (is_numeric(arg(3))) {
           <?php  print l(get_name($editor->uid), 'user/' . $editor->uid); ?></div>
       </div>
       <?php endif; ?>
-
-
-
       </div>
 <!--      check if we create task for this project, we hide project ref item-->
       <?php if (arg(3) == 'add' && is_null(arg(4)) ||$user->uid != in_array('customer', $user->roles) && arg(3) == 'add' && is_null(arg(4)) ): ?>
+        <?php foreach ($form['ref'] as $item):?>
+        <? endforeach?>
+        <!--          if no project ref-->
+          <?php if(empty($form['ref']['#options'])):?>
+
+          <!-- Modal -->
+          <div class="modal fade" id="modal_notask" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modal_notaskLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" disabled='disabled' class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title"><?php print t('Add project');?></h4>
+                </div>
+                <div class="modal-body">
+               <?php print t('You do note have any project to assign new task');?>
+                </div>
+                <div class="modal-footer">
+                 <?php print render ($form['add_project']);?>
+                 <?php print render ($form['back']);?>
+
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <?php endif; ?>
+
         <div class="row">
           <div class="col-lg-2">
           <span class="field-title">
@@ -59,7 +85,6 @@ if (is_numeric(arg(3))) {
           </div>
         </div>
       <?php endif; ?>
-
       <?php if (arg(4) == 'edit'): ?>
         <div class="row">
           <div class="col-lg-2">
@@ -163,18 +188,4 @@ if (is_numeric(arg(3))) {
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-
-<div id="myModal" class="modal hide fade" tabindex="-1" data-backdrop="false" role="dialog">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>My modal content here…</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal">Close</button>
-  </div>
-</div>
 

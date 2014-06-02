@@ -1788,7 +1788,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#title' => t('Project'),
         '#description' => t('Project of task'),
         '#default_value' => '',
-        '#required' => TRUE,
+        '#required' => FALSE,
         '#weight' => -95,
       );
     }
@@ -1808,7 +1808,7 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#title' => t('Project'),
         '#description' => t('Project of task'),
         '#default_value' => '',
-        '#required' => TRUE,
+        '#required' => FALSE,
         '#weight' => -95,
       );
     }
@@ -1995,6 +1995,22 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
         '#weight' => 200,
       );
     }
+
+    $form['add_project'] = array(
+      '#type' => 'submit',
+      '#value' => t('Add project'),
+      '#limit_validation_errors' => array(),
+      '#submit' => array('brilliant_pr_task_project_add'),
+      '#weight' => 200,
+    );
+    $form['back'] = array(
+      '#type' => 'submit',
+      '#value' => t('Back'),
+      '#limit_validation_errors' => array(),
+      '#submit' => array('brilliant_pr_task_back'),
+      '#weight' => 200,
+    );
+
 //    $form['cancel'] = array(
 //      '#type' => 'submit',
 //      '#value' => t('cancel'),
@@ -2010,6 +2026,21 @@ function brilliant_pr_task_form($form, &$form_state, $entity) {
   return $form;
 }
 
+/**
+ *  Add project
+ */
+
+function brilliant_pr_task_project_add () {
+  drupal_goto($path = 'entity/brilliant_pr_project/basic/add');
+}
+
+/**
+ * Back to task
+ */
+
+function brilliant_pr_task_back () {
+  drupal_goto($path = 'entity/brilliant_pr_task');
+}
 /**
  * Status function for task
  * @param null $id
