@@ -21,10 +21,7 @@ if (is_numeric(arg(3))) {
   $changed_time = format_date($task->changed);
   $editor = user_load_by_name($task->editor);
 }
-
-
 ?>
-
 <div class="row-fluid">
   <div class="span8">
     <fieldset>
@@ -35,7 +32,6 @@ if (is_numeric(arg(3))) {
         <div class="col-lg-4 pull-left">
           <?php print render($form['title']); ?>
         </div>
-
         <!--add last edit time and editor-->
         <?php if(arg(4) == 'edit'):?>
         <div class="col-lg-6 pull-left">
@@ -51,7 +47,6 @@ if (is_numeric(arg(3))) {
         <? endforeach?>
         <!--          if no project ref-->
           <?php if(empty($form['ref']['#options'])):?>
-
           <!-- Modal -->
           <div class="modal fade" id="modal_notask" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modal_notaskLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -61,18 +56,16 @@ if (is_numeric(arg(3))) {
                   <h4 class="modal-title"><?php print t('Add project');?></h4>
                 </div>
                 <div class="modal-body">
-               <?php print t('You do note have any project to assign new task');?>
+               <?php print t('You do not have any project to assign new task');?>
                 </div>
                 <div class="modal-footer">
                  <?php print render ($form['add_project']);?>
                  <?php print render ($form['back']);?>
-
                 </div>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->
           <?php endif; ?>
-
         <div class="row">
           <div class="col-lg-2">
           <span class="field-title">
@@ -118,9 +111,7 @@ if (is_numeric(arg(3))) {
         <?php print render($form['implementor']); ?>
       </div>
   </div>
-
       <?php endif; ?>
-
       <div class="row">
         <div class="col-lg-2">
           <span class="field-title"><?php print render($form['description']['#title']); ?></span>
@@ -159,17 +150,12 @@ if (is_numeric(arg(3))) {
             <span class="field-title"><?php print render($form['submit']); ?>
               <a data-toggle="modal" href="#remove-task-btn"><?php print render($form['remove']); ?></a>
 <?php print render($form['cancel']); ?></span>
-
           </div>
-
         </div>
       </div>
-
     </fieldset>
   </div>
 </div>
-
-
 <!-- Modal remove task -->
 <div class="modal fade" id="remove-task-btn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
