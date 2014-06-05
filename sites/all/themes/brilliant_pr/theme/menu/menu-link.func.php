@@ -55,24 +55,23 @@ function brilliant_pr_menu_link(array $variables) {
   }
 
   if($element["#theme"] == 'menu_link__menu_menu_float') {
-
     if($element['#title'] == 'Project') {
-      $element['#title'] = '<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Project">'._bootstrap_icon('th-large').'</span>';
+      $element['#title'] = '<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Projects">'._bootstrap_icon('th-large').'</span>';
     }
     if($element['#title'] == 'Tasks') {
-      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Task">'._bootstrap_icon('tasks'). '</span>';
+      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Tasks">'._bootstrap_icon('th'). '</span>';
     }
     if($element['#title'] == 'Calendar') {
-      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Calendar>'._bootstrap_icon('calendar'). '</span>';
+      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Calendar">'._bootstrap_icon('calendar'). '</span>';
     }
     if($element['#title'] == 'Chart') {
-      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Statistic">'._bootstrap_icon('stats'). '</span>';
+      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Chart">'._bootstrap_icon('stats'). '</span>';
     }
     if($element['#title'] == 'FAQ') {
       $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="FAQ">'._bootstrap_icon('question-sign'). '</span>';
     }
     if($element['#title'] == 'Settings') {
-      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Settings">'._bootstrap_icon('wrench'). '</span>';
+      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Report">'._bootstrap_icon('wrench'). '</span>';
     }
 
 //  dsm($element);

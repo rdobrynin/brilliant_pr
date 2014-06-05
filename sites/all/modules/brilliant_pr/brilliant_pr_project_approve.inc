@@ -102,7 +102,7 @@ function brilliant_pr_project_approve_page() {
           //Optional Caption for the table
           'sticky' => TRUE,
           //Optional to indicate whether the table headers should be sticky
-          'empty' => '<div class="alert alert-info a-message">'.t('Not found any projects for approve.') .'</div>',
+          'empty' => '<div class="alert alert-info a-message alert-dismissable">'.'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.t('Not found any projects for approve.') .'</div>',
           //Optional empty text for the table if result test is empty
         )
       );
@@ -113,7 +113,7 @@ function brilliant_pr_project_approve_page() {
     );
   }
   else {
-    $content = '<div class="alert alert-info a-message">'.t('Not found any projects for approve.') .'</div>';
+    $content = '<div class="alert alert-info a-message alert-dismissable">'.'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.t('Not found any projects for approve.') .'</div>';
     $html = $content;
   }
   return ($html);

@@ -78,7 +78,7 @@ function brilliant_pr_task_remove_list_admin_entities() {
     // There were no entities. Tell the user.
     $content[] = array(
       '#type' => 'item',
-      '#markup' => '<div class="alert alert-info a-message">'.t('Not found any removed tasks.') .'</div>',
+      '#markup' => '<div class="alert alert-info a-message alert-dismissable">'.'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.t('Not found any removed tasks.') .'</div>',
     );
   }
   return $content;
