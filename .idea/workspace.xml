@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu-link.func.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="menu-link.func.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="1334" selection-end="1334" vertical-scroll-proportion="-27.222221" vertical-offset="0" max-vertical-offset="3012">
+            <state line="57" column="0" selection-start="2199" selection-end="2199" vertical-scroll-proportion="0.47419354" vertical-offset="756" max-vertical-offset="3009">
               <folding>
                 <element signature="e#6#44#0" expanded="true" />
               </folding>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.5875" vertical-offset="966" max-vertical-offset="2814">
+            <state line="90" column="46" selection-start="3289" selection-end="3289" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="2778">
               <folding />
             </state>
           </provider>
@@ -185,8 +185,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/theme/system/region.vars.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" />
       </list>
     </option>
   </component>
@@ -1091,19 +1091,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1334" selection-end="1334" vertical-scroll-proportion="-27.222221" vertical-offset="0" max-vertical-offset="3012">
-          <folding>
-            <element signature="e#6#44#0" expanded="true" />
-          </folding>
+        <state line="90" column="46" selection-start="3289" selection-end="3289" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="2778">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.5875" vertical-offset="966" max-vertical-offset="2814">
-          <folding />
+        <state line="57" column="0" selection-start="2199" selection-end="2199" vertical-scroll-proportion="0.47419354" vertical-offset="756" max-vertical-offset="3009">
+          <folding>
+            <element signature="e#6#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

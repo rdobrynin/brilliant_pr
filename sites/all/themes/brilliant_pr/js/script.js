@@ -61,7 +61,7 @@
         }
     };
 
-    Drupal.behaviors.modal = {
+    Drupal.behaviors.scroll1 = {
         attach : function(context, settings) {
             $("#back-top").hide();
 
@@ -83,9 +83,7 @@
             });
         }
     };
-
-
-    Drupal.behaviors.modal = {
+    Drupal.behaviors.scroll2 = {
         attach : function(context, settings) {
             var el=$('#menu_float');
             var elpos=el.offset().top;
