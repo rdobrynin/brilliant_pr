@@ -83,6 +83,7 @@
             });
         }
     };
+
     Drupal.behaviors.scroll2 = {
         attach : function(context, settings) {
             var el=$('#menu_float');
@@ -95,8 +96,6 @@
                     else{el.stop().animate({'top':y-elpos},800);}
 
                 });
-
-
             });
         }
     };

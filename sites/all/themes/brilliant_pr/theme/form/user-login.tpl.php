@@ -19,5 +19,16 @@ $form['actions']['submit']['#id'] = 'login_btn';
     </div>
 
 
-
-
+<div class="modal fade" id="test_modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>Modal Header</h3>
+  </div>
+  <div class="modal-body">
+    <p>Test Modal</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <a href="#" class="btn btn-primary">Save Changes</a>
+  </div>
+</div>

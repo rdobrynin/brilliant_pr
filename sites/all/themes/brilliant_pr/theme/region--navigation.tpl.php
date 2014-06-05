@@ -54,8 +54,17 @@ global $base_url;
         <?php print render($page['primary_nav']); ?>
         <?php print render($page['secondary_nav']); ?>
         <!--        add select list-->
-<!--        --><?php //print format_date( time());?>
-        <span class="time-top"></span>
+
+
+<!--        SEARCH FORM-->
+        <form class="navbar-form navbar-right" role="search" id="search_form">
+          <div class="form-group">
+            <input type="text" class="form-control search" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-success btn-search">Submit</button>
+        </form>
+
+
         <?php if ($user->uid != in_array('customer', $user->roles) && $user->uid != in_array('implementor', $user->roles)): ?>
           <div class="btn-group select-nav-top">
             <button data-toggle="dropdown" class="btn dropdown-toggle" id="select-nav-top"><span class="glyphicon glyphicon-cog"></span><span class="caret"></span></button>
