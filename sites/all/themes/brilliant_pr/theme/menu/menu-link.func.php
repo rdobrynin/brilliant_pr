@@ -75,10 +75,6 @@ function brilliant_pr_menu_link(array $variables) {
       $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('wrench'). '</span>';
     }
 
-
-
-
-
 //  dsm($element);
     $element['#localized_options']['html'] = TRUE;
   }
