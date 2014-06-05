@@ -47,12 +47,28 @@ function bootstrap_preprocess_region(&$variables) {
       break;
 
     case 'sidebar_first':
-    case 'sidebar_second':
+    $attributes['class'][] = 'col-md-1';
       $variables['attributes_array']['role'] = 'complementary';
       $variables['theme_hook_suggestions'] = array(
         'region__sidebar',
         'region__' . $region,
       );
+      break;
+
+
+    case 'sidebar_second':
+      $attributes['class'][] = 'col-md-1';
+      $attributes['id'][] = 'menu_float';
+      $variables['attributes_array']['role'] = 'complementary';
+      $variables['theme_hook_suggestions'] = array(
+        'region__sidebar',
+        'region__' . $region,
+      );
+      break;
+
+    case 'content':
+      $attributes['class'][] = 'col-md-11';
+
       break;
 
     case 'help':

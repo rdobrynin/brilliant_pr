@@ -53,6 +53,37 @@ function brilliant_pr_menu_link(array $variables) {
     }
     $element['#localized_options']['html'] = true;
   }
+
+  if($element["#theme"] == 'menu_link__menu_menu_float') {
+
+    if($element['#title'] == 'Project') {
+      $element['#title'] = '<span style="font-size:20px;">'._bootstrap_icon('th-large').'</span>';
+    }
+    if($element['#title'] == 'Tasks') {
+      $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('tasks'). '</span>';
+    }
+    if($element['#title'] == 'Calendar') {
+      $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('calendar'). '</span>';
+    }
+    if($element['#title'] == 'Chart') {
+      $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('stats'). '</span>';
+    }
+    if($element['#title'] == 'FAQ') {
+      $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('question-sign'). '</span>';
+    }
+    if($element['#title'] == 'Settings') {
+      $element['#title'] ='<span style="font-size:20px;">'._bootstrap_icon('wrench'). '</span>';
+    }
+
+
+
+
+
+//  dsm($element);
+    $element['#localized_options']['html'] = TRUE;
+  }
+
+
   if($element["#theme"] == 'menu_link__user_menu'){
     if($element["#href"] == 'user'){
       $element['#title'] = '<span>'._bootstrap_icon('user').'</span>'.' '.'<span class="link">'.get_name($user->uid).'</span>';

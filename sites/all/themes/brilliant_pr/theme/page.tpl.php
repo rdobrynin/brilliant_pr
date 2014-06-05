@@ -87,12 +87,14 @@ drupal_add_js('sites/all/themes/brilliant_pr/js/script.js');
     <?php if ($page['sidebar_first']): ?>
       <?php print render($page['sidebar_first']); ?>
     <?php endif; ?>
-    <?php /* region--content.tpl.php */ ?>
-    <?php print render($page['content']); ?>
     <?php /* region--sidebar.tpl.php */ ?>
     <?php if ($page['sidebar_second']): ?>
       <?php print render($page['sidebar_second']); ?>
     <?php endif; ?>
+    <?php /* region--content.tpl.php */ ?>
+    <?php print render($page['content']);
+    ?>
+
   </div>
 </div>
 <?php /* region--footer.tpl.php */ ?>
