@@ -70,8 +70,8 @@ function brilliant_pr_menu_link(array $variables) {
     if($element['#title'] == 'FAQ') {
       $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="FAQ">'._bootstrap_icon('question-sign'). '</span>';
     }
-    if($element['#title'] == 'Settings') {
-      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Report">'._bootstrap_icon('wrench'). '</span>';
+    if($element['#title'] == 'Comments') {
+      $element['#title'] ='<span style="font-size:20px;" data-toggle="tooltip" data-original-title="Comments">'._bootstrap_icon('comment'). '</span>';
     }
 
 //  dsm($element);

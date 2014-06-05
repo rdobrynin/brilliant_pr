@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="brilliant_pr_ref_view.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_ref_view.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="175" selection-start="3214" selection-end="3214" vertical-scroll-proportion="-28.666666" vertical-offset="756" max-vertical-offset="2494">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="brilliant_pr_task_admin_approve.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_admin_approve.inc">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,11 +98,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar_left.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sidebar_left.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="30" selection-start="394" selection-end="394" vertical-scroll-proportion="0.38644066" vertical-offset="0" max-vertical-offset="1299">
+            <state line="24" column="1" selection-start="453" selection-end="453" vertical-scroll-proportion="-8.307693" vertical-offset="0" max-vertical-offset="1299">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu-link.func.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="5" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.63296705" vertical-offset="936" max-vertical-offset="2674">
+              <folding>
+                <element signature="e#6#44#0" expanded="true" />
+                <marker date="1401978795575" expanded="true" signature="3260:3275" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,7 +165,6 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/bootstrap/theme/system/region.vars.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/js/script.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_project_current.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_project_complete.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_project_approve.inc" />
@@ -179,6 +182,7 @@
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_current.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_task_remove.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php" />
       </list>
     </option>
   </component>
@@ -1014,15 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="5" selection-start="3176" selection-end="3176" vertical-scroll-proportion="-17.633333" vertical-offset="962" max-vertical-offset="2988">
-          <folding>
-            <element signature="e#6#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/brilliant_pr/brilliant_pr_project_admin_approve.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="177" selection-start="3816" selection-end="3816" vertical-scroll-proportion="-5.3333335" vertical-offset="1692" max-vertical-offset="2998">
@@ -1144,8 +1139,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/sidebar_left.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="394" selection-end="394" vertical-scroll-proportion="0.38644066" vertical-offset="0" max-vertical-offset="1299">
+        <state line="24" column="1" selection-start="453" selection-end="453" vertical-scroll-proportion="-8.307693" vertical-offset="0" max-vertical-offset="1299">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/menu/menu-link.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="5" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.63296705" vertical-offset="936" max-vertical-offset="2674">
+          <folding>
+            <element signature="e#6#44#0" expanded="true" />
+            <marker date="1401978795575" expanded="true" signature="3260:3275" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
