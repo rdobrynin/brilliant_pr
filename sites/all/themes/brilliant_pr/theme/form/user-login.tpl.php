@@ -11,10 +11,10 @@ $form['actions']['submit']['#id'] = 'login_btn';
         <h4 class="modal-title"><?php print t('Login');?></h4>
       </div>
       <div class="modal-body">
-        <div class="alert alert-block alert-danger messages error" id="login-error">
-          <a class="close" data-dismiss="alert" href="#">×</a>
-          <h4 class="element-invisible"><?php print t('Error message');?></h4>
-          <?php print t('Sorry, unrecognized username or password');?><a href="/brilliant_pr/user/password?name=qws"><?php print t('Have you forgotten your password?');?></a></div>
+<!--        <div class="alert alert-block alert-danger messages error" id="login-error">-->
+<!--          <a class="close" data-dismiss="alert" href="#">×</a>-->
+<!--          <h4 class="element-invisible">--><?php //print t('Error message');?><!--</h4>-->
+<!--          --><?php //print t('Sorry, unrecognized username or password');?><!--<a href="/brilliant_pr/user/password?name=qws">--><?php //print t('Have you forgotten your password?');?><!--</a></div>-->
         <div class="row">
           <div class="col-lg-6">
             <span class="grey"><?php print render($form['name']); ?></span>

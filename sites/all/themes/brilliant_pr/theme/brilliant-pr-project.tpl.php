@@ -90,6 +90,7 @@ $customer_fields = user_load_by_name($customer_username);
 // get curator profile
 $curator_username = get_user_curator($content['curator']['#markup']);
 $curator_fields = user_load_by_name($curator_username);
+dsm($content['field_comment']);
 ?>
   <div class="row p-top user_edit_profile">
     <div class="col-lg-2">
@@ -174,4 +175,12 @@ $curator_fields = user_load_by_name($curator_username);
       <?php  print render($content['changed']['#markup']); ?>
     </div>
   </div>
+<div class="row comment-block">
+  <div class="col-lg-1">
+    <div><?php  print render($content['field_comment']['#title']); ?></div>
+  </div>
+  <div class="col-lg-10">
+    <div>  <?php  print render($content['field_comment']); ?></div>
+  </div>
+</div>
 <?php //print drupal_render_children($content); ?>

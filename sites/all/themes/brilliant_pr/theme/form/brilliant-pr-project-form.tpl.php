@@ -8,6 +8,7 @@ hide($form['submit_task']);
 hide($form['delete']);
 hide($form['cancel']);
 hide($form['remove']);
+hide($form['field_comment']);
 // get changed time
 if (is_numeric(arg(3))) {
   $entity_id = arg(3);
@@ -16,6 +17,7 @@ if (is_numeric(arg(3))) {
   $curator = user_load_by_name($project->curator);
   $editor = user_load_by_name($project->editor);
 }
+dsm($form['field_comment']);
 ?>
 
 <div class="row-fluid">
@@ -94,7 +96,6 @@ enter the company name. Once all the fields are filled in, save the project. The
           </div>
         </div>
       </div>
-
       <?php
       if (!empty($form['status'][0]) || !empty($form['status'][1]) || !empty($form['status'][2]) || !empty($form['status'][3]) || !empty($form['status'][4]) || !empty($form['status'][5])) {
         print_r(' <div class="division">');
