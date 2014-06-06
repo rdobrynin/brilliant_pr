@@ -99,4 +99,23 @@
             });
         }
     };
+
+    $(window).load(function(){
+        $('#login_modal').modal();
+    });
+    $('#login_modal').on('hide',function(e){
+        e.preventDefault();
+    });
+
+    Drupal.behaviors.login = {
+        attach : function(context, settings) {
+                if ( $('#edit-name').hasClass( "error" ) || $('#edit-pass').hasClass( "error" ) ) {
+
+                   $('#login-error').show();
+
+                }
+        }
+    };
+
+
 })(jQuery);
