@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4febddba-a90d-4778-9adc-06b841f52932" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php" />
     </list>
     <ignored path="brilliant_pr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="32" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.7" vertical-offset="1200" max-vertical-offset="3102">
+            <state line="94" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="3102">
               <folding />
             </state>
           </provider>
@@ -53,12 +52,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-login.tpl.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user-login.tpl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="127" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-7.928571" vertical-offset="180" max-vertical-offset="1794">
+            <state line="35" column="22" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.7191781" vertical-offset="0" max-vertical-offset="1488">
               <folding>
-                <element signature="n#style#0;n#button#0;n#a#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1402048349267" expanded="true" signature="1080:1170" placeholder="..." />
+                <marker date="1402048349267" expanded="true" signature="1113:1170" placeholder="..." />
+                <marker date="1402048349267" expanded="true" signature="1239:1296" placeholder="..." />
+                <marker date="1402048349267" expanded="true" signature="1366:1441" placeholder="..." />
+                <marker date="1402048349267" expanded="true" signature="1520:1593" placeholder="..." />
+                <marker date="1402048349267" expanded="false" signature="1542:1554" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -183,8 +188,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/brilliant_pr.info" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/template.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/less/form.less" />
-        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php" />
       </list>
     </option>
   </component>
@@ -774,19 +779,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="127" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-7.928571" vertical-offset="180" max-vertical-offset="1794">
-          <folding>
-            <element signature="n#style#0;n#button#0;n#a#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="94" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="3102">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/script.js">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/brilliant_pr/theme/form/user-login.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="32" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.7" vertical-offset="1200" max-vertical-offset="3102">
-          <folding />
+        <state line="35" column="22" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.7191781" vertical-offset="0" max-vertical-offset="1488">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1402048349267" expanded="true" signature="1080:1170" placeholder="..." />
+            <marker date="1402048349267" expanded="true" signature="1113:1170" placeholder="..." />
+            <marker date="1402048349267" expanded="true" signature="1239:1296" placeholder="..." />
+            <marker date="1402048349267" expanded="true" signature="1366:1441" placeholder="..." />
+            <marker date="1402048349267" expanded="true" signature="1520:1593" placeholder="..." />
+            <marker date="1402048349267" expanded="false" signature="1542:1554" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
